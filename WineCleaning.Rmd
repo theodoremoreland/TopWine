@@ -1,0 +1,65 @@
+---
+title: "WineCleaning"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Dependencies
+```{r}
+library("tidyverse")
+```
+### Bring in the Wine
+```{r}
+wine_raw <-read_csv("winemag-data-130k-v2.csv")
+```
+### We only want the US wineries for the sake of simplicity
+```{r}
+unique(wine_raw$country)
+wine_US = subset(wine_raw,country=="US")
+wine_US_clean = na.omit(wine_US)
+```
+
+### How many wine varieties do we have?
+```{r}
+num_types = unique(wine_US_clean$variety)
+paste("There are", length(num_types), "in our dataset")
+
+wine_by_type = as.data.frame(table(wine_US_clean$variety))
+wine_by_type = wine_by_type[order(-wine_by_type$Freq),]
+
+# if we just take the top 10 wines in the US
+paste("The number of records for the top 10 varietals would give us", sum(wine_by_type$Freq[1:10]), "rows")
+```
+### pull the rows for just the top 10 varietals 
+```{r}
+wine_10 = as.data.frame(subset(wine_US_clean, variety == wine_by_type$Var1[1]|variety == wine_by_type$Var1[2]|
+                                 variety == wine_by_type$Var1[3]|variety == wine_by_type$Var1[4]|
+                                 variety == wine_by_type$Var1[5]|variety == wine_by_type$Var1[6]|
+                                 variety == wine_by_type$Var1[7]|variety == wine_by_type$Var1[8]|
+                                 variety == wine_by_type$Var1[9]|variety == wine_by_type$Var1[10]))
+write.csv(wine_10, file = "WineTop10.csv")
+```
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
