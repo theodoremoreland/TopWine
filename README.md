@@ -23,5 +23,5 @@ Visualizations:
         - Scatter plot showing the relationship between number of vineyards and avg wine price per state. 
         - Combined bar chart showing average bottle price for each wine variety and average rating per variety. 
 
-For our new JavaScript library, we will be using a set of code to create a bar chart layer over our map to show average prices and ratings per state: https://vida.io/documents/s5qo5Gwrct5HNxAD2.
+For our new JavaScript library, we will be using a leaflet plugin called "Leaflet Data Visualization Framework" to create bar chart markers for average price and average rating per state. Here is the GitHub link for this plugin: https://github.com/humangeo/leaflet-dvf.
 
