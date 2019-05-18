@@ -11,7 +11,7 @@ Key Questions:
 1. Which types of wine have the highest ratings?
 2. Which types of wine command the highest prices?  
 3. Which states produce wines that command the highest prices?
-4. Which states produce wines that 
+4. Which states produce wines that have the highest ratings?
 
 Visualizations:
     Map Layers:
