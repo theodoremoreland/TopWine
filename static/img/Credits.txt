@@ -1,0 +1,10 @@
+image-02: Photo by Zain Ali from Pexels (https://www.pexels.com/photo/selective-focus-photography-of-wine-glass-hanging-on-black-wooden-rack-1080383/)
+
+wine: Photo by freestocks.org from Pexels (https://www.pexels.com/photo/alcohol-bar-beverage-black-background-312080/)
+
+bg-bottle: Photo by Adonyi Gábor from Pexels (https://www.pexels.com/photo/wine-bottle-beside-grapes-roses-and-several-fruits-on-brown-wooden-surface-1407857/)
+
+reviewers: Photo by Helena Lopes from Pexels (https://www.pexels.com/photo/people-drinking-liquor-and-talking-on-dining-table-close-up-photo-696218/)
+
+barrel:  Photo by ELEVATE from Pexels (https://www.pexels.com/photo/brown-wooden-barrel-1267358/)
+
