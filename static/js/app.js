@@ -1,5 +1,6 @@
 var myData = data;
 
+<<<<<<< HEAD
 console.log(myData);
 
 var states;
@@ -77,3 +78,6 @@ Object.entries(stateData).forEach(([state, info]) => {
 
 });
 console.log(stateData);
+=======
+console.log(myData);
+>>>>>>> e8e197111246241141bcac0ed853100ff94a590f

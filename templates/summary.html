@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+<<<<<<< HEAD
 
 {% block content %}
 
@@ -34,5 +35,24 @@
 
     <!-- Javascript files must go in the static/js folder -->
     <script type="text/javascript" src="static/js/app.js"></script>
+=======
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div id="map" class="col">
+            
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var data = {{ states|tojson }};
+</script>
+
+<!-- Javascript files must go in the static/js folder -->
+<script type="text/javascript" src="static/js/app.js"></script>
+>>>>>>> e8e197111246241141bcac0ed853100ff94a590f
 
 {% endblock %}
