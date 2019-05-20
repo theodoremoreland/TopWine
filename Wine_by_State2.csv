@@ -1,4 +1,4 @@
-index,province,avg_price,avg_score,Latitude,Longitude
+id,province,avg_price,avg_score,Latitude,Longitude
 1,Arizona,29.2,84.92682927,34.1682185,-111.930907
 2,California,39.04104808,88.62777609,37.2718745,-119.2704153
 3,Colorado,32.98529412,86.11764706,38.9979339,-105.550567
