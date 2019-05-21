@@ -12,7 +12,7 @@ from flask import (
 from flask_sqlalchemy import SQLAlchemy
 
 application = Flask(__name__)
-application.config['DEBUG'] = True
+application.config['DEBUG'] = False
 
 # The database URI
 application.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///wine2.SQLite"
