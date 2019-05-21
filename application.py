@@ -1,4 +1,3 @@
-import pandas as pd
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -6,8 +5,7 @@ from sqlalchemy import create_engine
 
 from flask import (
     Flask,
-    render_template,
-    jsonify)
+    render_template)
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -42,8 +40,8 @@ def setup():
 def index():
     return render_template("index.html")
 
-@application.route("/summary")
-def summary():
+@application.route("/stats")
+def stats():
 
     results = db.session.query(States.province, States.avg_price, States.avg_score, States.Latitude, States.Longitude).all()
 
@@ -63,7 +61,7 @@ def summary():
         "lng": lng
     }
 
-    return render_template("summary.html", states=states)
+    return render_template("stats.html", states=states)
 
 @application.route("/story")
 def story():
@@ -72,11 +70,6 @@ def story():
 @application.route("/facts")
 def facts():
     return render_template("facts.html")
-
-
-@application.route("/reviews")
-def reviews():
-    return render_template("reviews.html")
     
 
 

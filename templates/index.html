@@ -39,7 +39,7 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Visualizations</a>
+            <a class="nav-link js-scroll-trigger" href="#stats">Statistics</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#github">Github</a>
@@ -55,24 +55,23 @@
       <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">Project2Wine</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">A platform for gathering meaningful insights about Wine across the US.</h2>
-        <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a>
+        <a href="#stats" class="btn btn-primary js-scroll-trigger">Get Started</a>
       </div>
     </div>
   </header>
 
-  <!-- Data Section -->
+  <!-- Projects Section -->
   <section id="projects" class="projects-section bg-light">
     <div class="container">
-
       <!-- Featured Route Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="{{ url_for('static', filename='img/bg-bottle.jpg') }}" alt="">
+          <a href="/stats"><img id="stats" class="img-fluid mb-3 mb-lg-0" src="{{ url_for('static', filename='img/bg-bottle.jpg') }}" alt=""></a>
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
-            <h4>Visualizations</h4>
-            <p class="text-black-50 mb-0">View our suite of data visualizations.</p>
+            <h4> <a href="/stats">Statistics</a> </h4>
+            <p class="text-black-50 mb-0">An intuitive view of Wine data.</p>
           </div>
         </div>
       </div>
@@ -86,8 +85,8 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Wine Reviews</h4>
-                <p class="mb-0 text-white-50">See what wine reviewers are saying about wine across the world!</p>
+                <h4 class="text-white">Story</h4>
+                <p class="mb-0 text-white-50">Data that tells a story.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>

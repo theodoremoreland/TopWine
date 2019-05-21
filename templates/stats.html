@@ -1,11 +1,35 @@
 {% extends 'base.html' %}
-<<<<<<< HEAD
 
 {% block content %}
 
-    <div id="map">
-                
-    </div>
+            <section id="projects" class="projects-section bg-light">
+                <div class="container">
+                <!-- Featured Route Row -->
+                    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
+
+                        <div class="col-5">
+                            <h4 class="text-black-50 mb-0">Map</h4>
+                            <p id="map"></p>
+                        </div>
+
+                        <div class="col-5">
+                            <h4 class="text-black-50 mb-0">Bar Chart</h4>
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/reviewers.jpg') }}" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <div id="bar-chart"></div>
+
+            <div id="taster-profile"></div>
+
+            <div id="scatter-plot"></div>
+
+
 
 
     <script type="text/javascript">
@@ -35,24 +59,5 @@
 
     <!-- Javascript files must go in the static/js folder -->
     <script type="text/javascript" src="static/js/app.js"></script>
-=======
-{% block content %}
-
-<div class="container">
-    <div class="row">
-        <div id="map" class="col">
-            
-        </div>
-    </div>
-</div>
-
-
-<script type="text/javascript">
-    var data = {{ states|tojson }};
-</script>
-
-<!-- Javascript files must go in the static/js folder -->
-<script type="text/javascript" src="static/js/app.js"></script>
->>>>>>> e8e197111246241141bcac0ed853100ff94a590f
 
 {% endblock %}
