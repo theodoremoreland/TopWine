@@ -49,10 +49,10 @@ def summary():
 
     # Create lists from the query results
     state = [result[0] for result in results]
-    price = [int(result[1]) for result in results]
-    score = [int(result[2]) for result in results]
-    lat = [int(result[3]) for result in results]
-    lng = [int(result[4]) for result in results]
+    price = [result[1] for result in results]
+    score = [result[2] for result in results]
+    lat = [result[3] for result in results]
+    lng = [result[4] for result in results]
 
     # Generate the plot trace
     states = {

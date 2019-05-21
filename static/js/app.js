@@ -33,12 +33,13 @@ for (i=0; i < states.length; i++) {
 console.log(stateData);
 
 //For each state, create two bar indicators (one each for price and rating)
-var barMarkers = []
+var barMarkers = [];
+
 Object.entries(stateData).forEach(([state, info]) => {
-    //console.log(value[0]);
+    //console.log(value[0])
     var options = {
         data: {
-            'Price': info[0] * 5,
+             'Price': info[0] * 5,
             'Rating': info[1] * 5
         },
         chartOptions: {
@@ -54,7 +55,7 @@ Object.entries(stateData).forEach(([state, info]) => {
                 displayText: function (value) {
                     return value.toFixed(2)/5;
                 }
-            } 
+            }
         },
         weight: 1,
         color: '#000000'
@@ -65,7 +66,25 @@ Object.entries(stateData).forEach(([state, info]) => {
     barMarkers.push(barChartMarker);
 });
 
+var stateMarkers = [];
+Object.entries(stateData).forEach(([state, info]) => {
+    //console.log(value[0]);
+    var ratingPriceRatio = (info[1]/info[0]).toFixed(2);
+    var markerOptions = {
+        stroke: false,
+        fillOpacity: 0.8,
+        color: 'white', 
+        fillColor: 'coral', 
+        radius: ratingPriceRatio * 5
+    };
+    var stateMarker = L.circleMarker([info[2], info[3]], 
+        markerOptions).bindPopup(state + ": " + ratingPriceRatio + " pts/$");
+
+    stateMarkers.push(stateMarker);
+});
+
 var barLayer = L.layerGroup(barMarkers);
+var stateLayer = L.layerGroup(stateMarkers);
 
 //Create title layers for light and dark maps
 var darkMap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -83,7 +102,8 @@ var lightMap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png
 });
 
 var overlayMaps = {
-    'Price vs. Ratings': barLayer
+    'Price vs. Ratings': barLayer, 
+    'State Rating/Price Ratio': stateLayer
 };
 
 var baseMaps = {
