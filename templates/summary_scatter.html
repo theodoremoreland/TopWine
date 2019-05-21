@@ -2,38 +2,13 @@
 
 {% block content %}
 
-            <section id="projects" class="projects-section bg-light">
-                <div class="container-fluid">
-                <!-- Featured Route Row -->
-                    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
-
-                        <div class="col-5" id="top-row">
-                            <h4 class="text-black-50 mb-0">Map</h4>
-                            <p id="map"></p>
-                        </div>
-
-                        <div class="col-5" id="top-row">
-                            <h4 class="text-black-50 mb-0">Bar Chart</h4>
-                            <img class="img-fluid" src="{{ url_for('static', filename='img/reviewers.jpg') }}" alt="">
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            
-
-            <div id="bar-chart"></div>
-
-            <div id="taster-profile"></div>
-
-            <div id="scatter-plot"></div>
-
-
+    <div id="map">
+                    
+    </div>
 
     <script type="text/javascript">
-        var data = {{ states|tojson }};
-        var tops = {{ top|tojson }};
+        // var data = {{ states|tojson }};
+        var data10 = {{ wine10|tojson }};
     </script>
 
 
@@ -59,5 +34,7 @@
 
     <!-- Javascript files must go in the static/js folder -->
     <script type="text/javascript" src="static/js/appScatter.js"></script>
+
+    
 
 {% endblock %}
