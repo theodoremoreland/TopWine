@@ -45,13 +45,13 @@ Object.entries(stateData).forEach(([state, info]) => {
         chartOptions: {
 
             'Price': {
-                fillColor: '#FEE5D9',
+                fillColor: '#1D8348',
                 displayText: function (value) {
                     return value.toFixed(2)/5;
                 }
             },
             'Rating': {
-                fillColor: '#FCAE91',
+                fillColor: '#943126',
                 displayText: function (value) {
                     return value.toFixed(2)/5;
                 }
@@ -70,11 +70,21 @@ var stateMarkers = [];
 Object.entries(stateData).forEach(([state, info]) => {
     //console.log(value[0]);
     var ratingPriceRatio = (info[1]/info[0]).toFixed(2);
+
+    var circleColor;
+    if (ratingPriceRatio <= 3){
+        circleColor = '#FCF3CF'
+    } else if (ratingPriceRatio <= 5) {
+        circleColor = '#F7DC6F'
+    } else {
+        circleColor = '#F1C40F'
+    };
+
     var markerOptions = {
         stroke: false,
-        fillOpacity: 0.8,
+        fillOpacity: 0.9,
         color: 'white', 
-        fillColor: 'coral', 
+        fillColor: circleColor, 
         radius: ratingPriceRatio * 5
     };
     var stateMarker = L.circleMarker([info[2], info[3]], 
