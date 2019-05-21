@@ -22,10 +22,12 @@ Object.entries(wine).forEach(([key, value]) => {
     }
 });
 
-var bottleData = {};
+var bottleData = {
+};
+
 //Create new object with states as keys and info as values
 for (i=0; i < bottle.length; i++) {
-    bottleData[id[i]] = [price[i], rating[i], grape[i]];
+    bottleData[bottle[i]] = [price[i], rating[i], grape[i]];
 };
 
 console.log(bottleData);

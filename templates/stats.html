@@ -27,13 +27,13 @@
 
             <div id="taster-profile"></div>
 
-            <div id="scatter-plot"></div>
+            <div id="scatter"></div>
 
 
 
     <script type="text/javascript">
         var data = {{ states|tojson }};
-        var tops = {{ top|tojson }};
+        var data10 = {{ top10|tojson }};
     </script>
 
 
@@ -48,6 +48,9 @@
     integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
     crossorigin=""></script>
 
+    <!-- Plotly Javascript -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
     <!-- Icons -->
     <script src="static/js/leaflet-dvf.markers.js"></script>
 
@@ -58,6 +61,7 @@
     <script type="text/javascript" src="static/js/config.js"></script>
 
     <!-- Javascript files must go in the static/js folder -->
+    <script type="text/javascript" src="static/js/app.js"></script>
     <script type="text/javascript" src="static/js/appScatter.js"></script>
 
 {% endblock %}

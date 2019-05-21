@@ -124,7 +124,7 @@ var baseMaps = {
 //Create map
 var myMap = L.map("map", {
     center: [39, -98],
-    zoom: 5, 
+    zoom: 3, 
     layers: [darkMap, barLayer]
 });
 
