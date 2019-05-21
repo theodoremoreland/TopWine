@@ -44,6 +44,7 @@ def index():
 def stats():
 
     results = db.session.query(States.province, States.avg_price, States.avg_score, States.Latitude, States.Longitude).all()
+    results2 = db.session.query(Top10.points, Top10.price, Top10.variety).all()
 
     # Create lists from the query results
     state = [result[0] for result in results]
@@ -51,6 +52,13 @@ def stats():
     score = [int(result[2]) for result in results]
     lat = [int(result[3]) for result in results]
     lng = [int(result[4]) for result in results]
+
+
+    # Create lists from the query results
+    points = [int(result[0]) for result in results2]
+    prices = [int(result[1]) for result in results2]
+    variety = [result[2] for result in results2]
+    
 
     # Generate the plot trace
     states = {
@@ -61,7 +69,13 @@ def stats():
         "lng": lng
     }
 
-    return render_template("stats.html", states=states)
+    top = {
+        "points": points,
+        "price": prices,
+        "province": province
+    }
+
+    return render_template("stats.html", states=states, top=top)
 
 @application.route("/story")
 def story():

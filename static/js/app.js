@@ -107,7 +107,4 @@ L.control.layers(baseMaps, overlayMaps, {
 
 
 console.log(stateData);
-<<<<<<< HEAD
-=======
 console.log(myData);
->>>>>>> 7885667cf54382ed1d8d8a63b46e2730889a3401

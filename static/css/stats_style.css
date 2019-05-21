@@ -1,0 +1,10 @@
+#top-row {
+    column-gap: 25px;
+    margin: 50%;
+}
+
+img:hover {
+    padding: 1%;
+    border: inset;
+    border-color: cornflowerblue;
+  }
