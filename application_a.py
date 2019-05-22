@@ -57,11 +57,6 @@ def stats():
 
 
     # Create lists from the query results
-    # ids = [result[0] for result in results2]
-    # price = [int(result[1]) for result in results2]
-    # points = [int(result[2]) for result in results2]
-    # variety = [result[3] for result in results2]
-    # designation = [result[4] for result in results2]
     top10 = []
     for result in results2:
         sample_metadata = {}
@@ -85,14 +80,6 @@ def stats():
         "lat": lat,
         "lng": lng
     }
-
-    # top10 = {
-    #     "id": ids,
-    #     "price": price,
-    #     "points": points,
-    #     "grape" : variety,
-    #     "designation" : designation
-    # }
 
     return render_template("stats.html", states=states, top10=top10)
 
