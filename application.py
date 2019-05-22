@@ -81,6 +81,10 @@ def stats():
 
     return render_template("stats.html", states=states, top10=top10)
 
+@application.route("/scrape/<critic>")
+def scrape(critic):
+    return "you scraped, " + str(critic)
+
 @application.route("/story")
 def story():
     return render_template("story.html")
