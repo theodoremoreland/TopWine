@@ -83,7 +83,8 @@ function buildCharts(min, max){
         hoverinfo: "text",
         marker: {
             color: "Crimson",
-            size: 18
+            size: 18,
+            opacity: .2
         },
         }];
     // }];
@@ -117,11 +118,11 @@ function init() {
 init();
 
 // Trying to get the new ranges when someone selects it on the scatter plot
-function optionChanged() {
-    var ranges = d3.select(this).property('value')
+function optionChanged(selectObject) {
+    var ranges = selectObject.value;
     console.log(ranges);
     var maxmin = ranges.split(',')
     var newmin = maxmin[0];
     var newmax = maxmin[1];
-    updateBars(newmin, newmax);
+    buildCharts(newmin, newmax);
 };
