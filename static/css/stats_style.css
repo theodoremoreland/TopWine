@@ -1,9 +1,255 @@
 #top-row {
     margin: 1%;
+    padding: 2%;
 }
 
-img:hover {
-    padding: 1%;
-    border: inset;
-    border-color: cornflowerblue;
+#map {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin:0;
+    padding:0; 
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+
+  #bar-chart {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    margin:0;
+    padding: 1px; 
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+  }
+
+  @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400');
+
+  *,
+  *:before,
+  *:after{
+    box-sizing: border-box;
+  }
+  
+  * {
+    user-select: none; 
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    transform-style: preserve-3d; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  *:focus {
+    outline: none!important; 
+  }
+  
+  
+  .container{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row;
+    perspective: 1000px;
+    perspective-origin: center;
+  }
+  
+  .col{
+    height:  100%;
+    transition: transform 600ms cubic-bezier(0.390, 0.575, 0.565, 1.000), opacity 300ms ease;
+    transform: translateZ(34px) scale(.98);
+    flex: 0 0 33.3333%; 
+    position: relative;
+  }
+  
+  .col:nth-of-type(1){
+    transform: rotateY(5deg) translateZ(34px) scale(.98);
+  }
+  
+  .col:nth-of-type(3){
+    transform: rotateY(-5deg) translateZ(34px) scale(.98);
+  }
+  
+  .col:hover,
+  .col:focus{
+    transform: translateZ(34px);
+    transition: transform 300ms cubic-bezier(0.390, 0.575, 0.565, 1.000), opacity 300ms ease;
+  }
+  
+  .card-container{
+    position: relative;
+    width: calc(100% - 25px);
+    height:  calc(33.3% - 25px);
+    margin: 17px;
+    padding: 8px;
+    text-align: center;
+    opacity: 1;
+  }
+  
+  .card-container:hover,
+  .card-container:focus{
+    opacity: 1;
+  }
+  
+  
+  .card{
+    border-radius: 5px;
+    height: 100%;
+    transition: all 300ms ease-out;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 0;
+    opacity: 1;
+    padding: 13px 21px;
+  }
+  
+  .card:before,
+  .card:after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: .30;
+    transition: transform 300ms ease;
+    transform: scale(.98);
+  }
+  
+  .card:before{
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .card-container:hover .card:before,
+  .card-container:hover .card:after,
+  .card-container:focus .card:before,
+  .card-container:focus .card:after{
+    opacity: .70;
+    transform: scale(1);
+  }
+  
+  .col:nth-of-type(1) .card-container:nth-of-type(1) .card:before{
+        background-image: url('https://images.pexels.com/photos/51947/tuscany-grape-field-nature-51947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  }
+  
+  .col:nth-of-type(2) .card-container:nth-of-type(1) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/m18-090.jpg?itok=TQ8Fuk4x');
+  }
+  
+  .col:nth-of-type(3) .card-container:nth-of-type(1) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/40808879360_18c96d62f1_o.jpg?itok=NttmTWPK');
+  }
+  
+  .col:nth-of-type(1) .card-container:nth-of-type(2) .card:before{
+        background-image: url('https://images.pexels.com/photos/1123260/pexels-photo-1123260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  }
+  
+  .col:nth-of-type(2) .card-container:nth-of-type(2) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/ubernode_alt_horiz/public/thumbnails/image/worldview201709201920x1080.png');
+  }
+  
+  .col:nth-of-type(3) .card-container:nth-of-type(2) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/nasasibexobs.jpg?itok=U2LCp14i');
+  }
+  
+  .col:nth-of-type(1) .card-container:nth-of-type(3) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/pia19808.jpg?itok=rgxgamMM');
+  }
+  
+  .col:nth-of-type(2) .card-container:nth-of-type(3) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/e0102_lg.jpg?itok=sd9lOayI');
+  }
+  
+  .col:nth-of-type(3) .card-container:nth-of-type(3) .card:before{
+        background-image: url('https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/asteroid20180605-home.jpg?itok=KSUffiCR');
+  }
+  
+  .card:after{
+    background: linear-gradient(to bottom, rgba(0, 240, 60, 0) 50%,rgba(99, 0, 86, 0.26) 100%);
+  }
+  
+  h4{
+    text-align: left;
+    font-size: 18px;
+    font-weight:600;
+    transform: translateY(5px);
+    transition: transform 450ms cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    max-width: 320px;
+    outline: 1px solid transparent;
+  }
+  
+  .overlay:hover ~ .card h4,
+  .overlay:focus ~ .card h4{
+    transform: translateZ(144px);
+  }
+  
+  .card > span{
+    font-size: 34px;
+    opacity: 0;
+    transform: translateX(-3px);
+    transition: all 300ms ease;
+  }
+  
+  .card-container:hover > .card > h4,
+  .card-container:focus > .card > h4{
+    transform: translateY(-13px);
+  }
+  
+  .card-container:hover > .card > span,
+  .card-container:focus > .card > span{
+   opacity: 1;
+      transform: translateX(3px);
+    animation: slideRight 300ms ease;
+  }
+  
+  @media (max-width: 768px){
+    h4{
+      font-size: 17px;
+    }
+  }
+  
+  @media (max-width: 540px){
+    .container{
+      flex-flow: column;
+      perspective: none;
+    }
+    
+    .col:nth-of-type(1),
+    .col:nth-of-type(2),
+    .col:nth-of-type(3),
+    .col:hover{
+        transform: none;
+    }
+    
+    h4{
+      padding-bottom: 8px;
+      font-size: 18px;
+    }
+    
+  .card > span{
+        display: none;
+    }
+  }
+  
+  @media (max-height: 599px){
+  .card > span{
+        display: none;
+    }
+  }
+  
+  @media (max-width: 860px) and (max-height: 540px){
+    h4{
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 620px) and (max-height: 540px){
+    h4{
+      font-size: 13px;
+    }
   }

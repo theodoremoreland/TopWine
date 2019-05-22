@@ -45,13 +45,13 @@ Object.entries(stateData).forEach(([state, info]) => {
         chartOptions: {
 
             'Price': {
-                fillColor: '#1D8348',
+                fillColor: '#0cff45',
                 displayText: function (value) {
                     return value.toFixed(2)/5;
                 }
             },
             'Rating': {
-                fillColor: '#943126',
+                fillColor: '#b21ac9',
                 displayText: function (value) {
                     return value.toFixed(2)/5;
                 }

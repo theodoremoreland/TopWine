@@ -2,32 +2,85 @@
 
 {% block content %}
 
-            <section id="projects" class="projects-section bg-light">
-                <div class="container-fluid">
-                <!-- Featured Route Row -->
-                    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
 
-                        <div class="col-5" id="top-row">
-                            <h4 class="text-black-50 mb-0">Map</h4>
-                            <p id="map"></p>
-                        </div>
-
-                        <div class="col-5" id="top-row">
-                            <h4 class="text-black-50 mb-0">Bar Chart</h4>
-                            <img class="img-fluid" src="{{ url_for('static', filename='img/reviewers.jpg') }}" alt="">
-                        </div>
-
-                    </div>
+<div class="container-fluid">
+<!-- Featured Route Row -->
+    <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
+        <div class="col-5" id="top-row">
+            <div class="text-center">
+                    <h4 class="text-black-50 mb-0">Map</h4> 
                 </div>
-            </section>
+            <p id="map"></p>
+        </div>
+        <div class="col-5" id="top-row">
+            <div class="text-center">
+                <h4 class="text-black-50 mb-0">Bar Chart</h4> 
+            </div>
+            <p id="bar-chart"></p>
+        </div>
+    </div>
 
+
+    <div id="taster-profile"></div>
+
+    <div id="scatter"></div>
+
+</div>
+
+<div class="container">
+  
+    <div class="col">
+    
+            <div class="card-container">
+            <div class="card">
+                <h4>26 states are making their own wine in the US.</h4>
+                <span class="chev">&rsaquo;</span>
+            </div>
+            </div>
             
+            <div class="card-container">
+            <div class="card">
+                <h4>10 varieties of wine used from our dataset.</h4>
+                <span class="chev">&rsaquo;</span>
+            </div>
+            </div>
 
-            <div id="bar-chart"></div>
+    </div>
+        
+    <div class="col">
+            <div class="card-container">
+            <div class="card">
+                <h4>$87 is the average cost of one bottle of wine in the United States.</h4>
+                <span class="chev">&rsaquo;</span>
+            </div>
+            </div>
+        
+        
+            <div class="card-container">
+            <div class="card">
+                <h4>The average bottle of wine is rated 88/100 by wine critics.</h4>
+                <span class="chev">&rsaquo;</span>
+            </div>
+            </div>
+    </div>
+        
+    <div class="col">
+            <div class="card-container">
+            <div class="card">
+                <h4>Unknown number of breweies in our dataset.</h4>
+                <span class="chev">&rsaquo;</span>
+            </div>
+            </div>
+            
+            <div class="card-container">
+            <div class="card">
+                <h4>16,311 rows of data.</h4>
+                <span class="chev">&rsaquo;</span>
+            </div>
+            </div>
+    </div>
+</div>
 
-            <div id="taster-profile"></div>
-
-            <div id="scatter"></div>
 
 
 
@@ -63,5 +116,6 @@
     <!-- Javascript files must go in the static/js folder -->
     <script type="text/javascript" src="static/js/app.js"></script>
     <script type="text/javascript" src="static/js/appScatter.js"></script>
+    <script type="text/javascript" src="static/js/appBar.js"></script>
 
 {% endblock %}
