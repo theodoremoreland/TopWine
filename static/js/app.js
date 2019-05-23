@@ -129,7 +129,8 @@ var myMap = L.map("map", {
 });
 
 L.control.layers(baseMaps, overlayMaps, {
-    collapsed: false
+    collapsed: false,
+    position:'topleft'
 }).addTo(myMap);
 
 
@@ -138,3 +139,4 @@ L.control.layers(baseMaps, overlayMaps, {
 
 console.log(stateData);
 console.log(myData);
+

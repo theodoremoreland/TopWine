@@ -36,10 +36,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#stats">Statistics</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#stats">Statistics</a>
+              <a class="nav-link js-scroll-trigger" href="#conclusions">Conclusions</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#credits">Credits</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#github">Github</a>
@@ -79,14 +82,24 @@
       <!-- Route Two Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="{{ url_for('static', filename='img/reviewers.jpg') }}" alt="">
+          <img class="img-fluid" src="{{ url_for('static', filename='img/tall1.jpg') }}" alt="">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Story</h4>
-                <p class="mb-0 text-white-50">Data that tells a story.</p>
+            <div class="d-flex h-100" >
+              <div class="project-text w-100 my-auto text-center text-lg-left"  id="conclusions">
+                <h4 class="text-white" >Conclusions</h4>
+                <p class="mb-0 text-white-50">
+                    * There are three states which clearly produce higher-value wines: Iowa, Ohio, and Connecticut. The rating-to-price ratio in these states is significantly higher than states like California, which are well-known for their wines.
+                </p>
+                <br>
+                <p class="mb-0 text-white-50">
+                    * Across wine varieties, average prices and ratings do not vary significantly. If you have a favorite wine variety, you don’t need to worry about missing out on value since there aren’t major differences across the most popular wine types.
+                </p>
+                <br>
+                <p class="mb-0 text-white-50">
+                    * In general, there isn’t a strong correlation between wine prices and ratings. Even in different price brackets, a wine’s price isn’t related to its rating in a meaningful way. Therefore, we are happy to report that you don’t need to spend a fortune to enjoy nice wine!
+                </p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -97,14 +110,27 @@
       <!-- Route Three Row -->
       <div class="row justify-content-center no-gutters">
         <div class="col-lg-6">
-          <img class="img-fluid" src="static/img/barrel.jpg" alt="">
+          <img class="img-fluid" src="static/img/tall3.jpg" alt="" id="credits">
         </div>
         <div class="col-lg-6 order-lg-first">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white">Facts</h4>
-                <p class="mb-0 text-white-50">Facts about wine!</p>
+                <h4 class="text-white" id="credits">Credits</h4>
+                <a>
+                <p class="mb-0 text-white-50">
+                  Photos: <a href="{{ url_for('.credits', _anchor='photos') }}">Link</a>
+                </p>
+                </a>
+                <p class="mb-0 text-white-50">
+                  Bootstrap: <a href="{{ url_for('.credits', _anchor='bootstrap') }}">Link</a>
+                </p>
+                <p class="mb-0 text-white-50">
+                  CSS:  <a href="{{ url_for('.credits', _anchor='css') }}">Link</a>
+                </p>
+                <p class="mb-0 text-white-50">
+                  JavaScript: <a href="{{ url_for('.credits', _anchor='javascript') }}">Link</a>
+                </p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>

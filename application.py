@@ -80,9 +80,6 @@ def stats():
     
     #print(top10)
 
-
-    
-
     # Generate the plot trace
     states = {
         "state": state,
@@ -106,10 +103,32 @@ def stats():
 
     return render_template("stats.html", states=states, top10=top10, table10=table10)
 
-@application.route("/dataset")
-def dataset():
-    return render_template("table.html")
+@application.route("/credits")
+def credits():
 
+    return render_template("credits.html")
+
+@application.route("/map")
+def map():
+    results = db.session.query(States.province, States.avg_price, States.avg_score, States.Latitude, States.Longitude).all()
+
+    # Create lists from the query results
+    state = [result[0] for result in results]
+    price = [result[1] for result in results]
+    score = [result[2] for result in results]
+    lat = [result[3] for result in results]
+    lng = [result[4] for result in results]
+
+    # Generate the plot trace
+    states = {
+        "state": state,
+        "avg_price": price,
+        "avg_score": score,
+        "lat": lat,
+        "lng": lng
+    }
+
+    return render_template("map.html", states=states)
 
 if __name__ == "__main__":
     application.run()
