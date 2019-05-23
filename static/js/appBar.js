@@ -1,6 +1,6 @@
-var Top10 = data10;
+var Top10 = table10;
 
-console.log(Top10);
+// console.log(Top10);
 
 var varieties = [];
 var avg_price = [];
@@ -15,7 +15,7 @@ for (var index in Top10.grape) {
     }
 };
 
-// console.log(varieties);
+ console.log(varieties);
 
 var sum = 0;
 var count = 0;
@@ -34,7 +34,7 @@ for (var i in varieties) {
     avg_price.push(sum/count);
 };
 
-// console.log(avg_price);
+ console.log(avg_price);
 
 var sum = 0;
 var count = 0;
@@ -53,7 +53,7 @@ for (var i in varieties) {
     avg_rating.push(sum/count);
 };
 
-// console.log(avg_rating);
+ console.log(avg_rating);
 
 var trace1 = {
     x: varieties,

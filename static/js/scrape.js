@@ -1,2 +1,2 @@
-var criticsTable = data10;
+var criticsTable = table10;
 

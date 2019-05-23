@@ -45,7 +45,7 @@ def index():
 def stats():
 
     results = db.session.query(States.province, States.avg_price, States.avg_score, States.Latitude, States.Longitude).all()
-    results2 = db.session.query(Top10.id, Top10.price, Top10.points, Top10.variety, Top10.designation, Top10.taster_name, Top10.taster_twitter_handle, Top10.winery, Top10.description).all()
+    results2 = db.session.query(Top10.id, Top10.price, Top10.points, Top10.variety, Top10.designation).all()
 
 
     # Create lists from the query results
@@ -57,17 +57,6 @@ def stats():
 
 
     # Create lists from the query results
-    ids = [result[0] for result in results2]
-    price = [int(result[1]) for result in results2]
-    points = [int(result[2]) for result in results2]
-    variety = [result[3] for result in results2]
-    designation = [result[4] for result in results2]
-    taster_name = [result[5] for result in results2]
-    taster_twitter_handle = [result[6] for result in results2]
-    winery = [result[7] for result in results2]
-    description = [result[8] for result in results2]
-
-
     top10 = []
     for result in results2:
         sample_metadata = {}
@@ -78,7 +67,7 @@ def stats():
         sample_metadata["designation"] = result[4]
         top10.append(sample_metadata)
     
-    #print(top10)
+    print(top10)
 
 
     
@@ -92,23 +81,16 @@ def stats():
         "lng": lng
     }
 
-    table10 = {
-        "id": ids,
-        "price": price,
-        "points": points,
-        "grape" : variety,
-        "designation" : designation,
-        "taster_name" : taster_name,
-        "taster_twitter_handle": taster_twitter_handle,
-        "winery": winery,
-        "description" : description
-    }
+    return render_template("stats.html", states=states, top10=top10)
 
-    return render_template("stats.html", states=states, top10=top10, table10=table10)
+@application.route("/story")
+def story():
+    return render_template("story.html")
 
-@application.route("/dataset")
-def dataset():
-    return render_template("table.html")
+@application.route("/facts")
+def facts():
+    return render_template("facts.html")
+    
 
 
 if __name__ == "__main__":

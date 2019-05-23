@@ -114,11 +114,49 @@
     </div>
 </div>
 
-<div id="scatter"></div>
+<div class="text-center">
+        <h3 class="text-black-50 mb-0">Price Vs Rating</h3> 
+</div>
+<div class="row justify-content-center no-gutters mb-5 mb-lg-5">
+
+        <div class="col-10">
+                <h5>Select Price Range</h5>
+                <!-- Should be able to select an option from the dropdown menu and the visuals change -->
+                <select id="selDataset" onchange="optionChanged(this)">
+                    <option value = "0,100000">
+                            All The Wine
+                    </option>
+                    <option value = "0,10">
+                            $0-$10
+                    </option>
+                    <option value = "11,20">
+                            $11-$20
+                    </option>
+                    <option value = "21,50">
+                            $21-$50
+                    </option>
+                    <option value = "51,100">
+                            $51-$100
+                    </option>
+                    <option value = "101,200">
+                            $101-$200
+                    </option>
+                    <option value = "201,500">
+                            $201-$500
+                    </option>
+                    <option value = "501, 100000">
+                            > $501
+                    </option>
+                </select>
+            <!-- <h4 class="text-black-50 mb-0">Prices vs Rating</h4> -->
+            <p id="scatter"></p>
+        </div>
+    </div>
 
     <script type="text/javascript">
         var data = {{ states|tojson }};
         var data10 = {{ top10|tojson }};
+        var table10 = {{ table10|tojson }};
     </script>
 
 

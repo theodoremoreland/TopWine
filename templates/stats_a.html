@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+            <section id="projects" class="projects-section bg-light">
+                <div class="container-fluid">
+                <!-- Featured Route Row -->
+                    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
+
+                        <div class="col-5" id="top-row">
+                            <h4 class="text-black-50 mb-0">Map</h4>
+                            <p id="map"></p>
+                        </div>
+
+                        <div class="col-5" id="top-row">
+                            <h4 class="text-black-50 mb-0">Bar Chart</h4>
+                            <img class="img-fluid" src="{{ url_for('static', filename='img/reviewers.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
+                        <div class="col-12" id="top-row">
+                                <h5>Select Price Range</h5>
+                                <!-- Should be able to select an option from the dropdown menu and the visuals change -->
+                                <select id="selDataset" onchange="optionChanged(this)">
+                                    <option value = "0,100000">
+                                            All The Wine
+                                    </option>
+                                    <option value = "0,10">
+                                            $0-$10
+                                    </option>
+                                    <option value = "11,20">
+                                            $11-$20
+                                    </option>
+                                    <option value = "21,50">
+                                            $21-$50
+                                    </option>
+                                    <option value = "51,100">
+                                            $51-$100
+                                    </option>
+                                    <option value = "101,200">
+                                            $101-$200
+                                    </option>
+                                    <option value = "201,500">
+                                            $201-$500
+                                    </option>
+                                    <option value = "501, 100000">
+                                            > $501
+                                    </option>
+                                </select>
+                            <!-- <h4 class="text-black-50 mb-0">Prices vs Rating</h4> -->
+                            <p id="scatter"></p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            
+
+            <div id="bar-chart"></div>
+
+            <div id="taster-profile"></div>
+
+            <div id="scatter"></div>
+
+
+
+    <script type="text/javascript">
+        var data = {{ states|tojson }};
+        var data10 = {{ top10|tojson }};
+    </script>
+
+
+    <!-- D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+    <!-- MomentJS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+
+    <!-- Plotly Javascript -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Icons -->
+    <script src="static/js/leaflet-dvf.markers.js"></script>
+
+    <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+    <!-- API Key -->
+    <script type="text/javascript" src="static/js/config.js"></script>
+
+    <!-- Javascript files must go in the static/js folder -->
+    <script type="text/javascript" src="static/js/app.js"></script>
+    <script type="text/javascript" src="static/js/appScatter.js"></script>
+
+{% endblock %}
