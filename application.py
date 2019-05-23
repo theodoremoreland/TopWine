@@ -85,14 +85,9 @@ def stats():
 def scrape(critic):
     return "you scraped, " + str(critic)
 
-@application.route("/story")
-def story():
-    return render_template("story.html")
-
-@application.route("/facts")
-def facts():
-    return render_template("facts.html")
-    
+@application.route("/dataset")
+def dataset():
+    return render_template("table.html")
 
 
 if __name__ == "__main__":

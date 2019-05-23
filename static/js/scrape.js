@@ -1,0 +1,2 @@
+var criticsTable = data10;
+
