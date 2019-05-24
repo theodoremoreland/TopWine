@@ -1,5 +1,7 @@
 # Project2Wine
 
+Link to finished product: http://www.project2wine.com/
+
 Project Proposal: Visualizing Wine Reviews
 Group Members: Peter Meyers, Andrew Mullenger, Theo Moreland, Danielle Perkins
 Link to Dataset: https://www.kaggle.com/zynicide/wine-reviews/version/4?
