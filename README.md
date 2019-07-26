@@ -1,6 +1,6 @@
 # Project2Wine
 
-Link to finished product: http://www.project2wine.com/
+Link to finished product: http://www.project2wine.com/ (currently not live)
 
 Project Proposal: Visualizing Wine Reviews
 Group Members: Peter Meyers, Andrew Mullenger, Theo Moreland, Danielle Perkins
@@ -27,3 +27,40 @@ Visualizations:
 
 For our new JavaScript library, we will be using a leaflet plugin called "Leaflet Data Visualization Framework" to create bar chart markers for average price and average rating per state. Here is the GitHub link for this plugin: https://github.com/humangeo/leaflet-dvf.
 
+# Landing page (Default View)
+<img src="static/img2/step1.PNG" width="900">
+
+# Landing page (Stats View)
+<img src="static/img2/step2.PNG" width="900">
+
+# Statistics page (Summary view)
+<img src="static/img2/step3.PNG" width="900">
+
+# Statistics page (Map view)
+<img src="static/img2/step4.PNG" width="900">
+
+# Map
+<img src="static/img2/step5.PNG" width="900">
+
+# Map (After interaction)
+<img src="static/img2/step6.PNG" width="900">
+
+# Statistics page (Bar chart view)
+<img src="static/img2/step7.PNG" width="900">
+
+# Bar chart (After interaction)
+<img src="static/img2/step8.PNG" width="900">
+
+# Statistics page (Scatter plot view)
+<img src="static/img2/step9.PNG" width="900">
+
+# Scatter plot (After interaction)
+<img src="static/img2/step10.PNG" width="900">
+
+# Conclusions (View)
+<img src="static/img2/step11.PNG" width="900">
+
+# Credits (View)
+<img src="static/img2/step12.PNG" width="900">
+
+Last updated 7/25/2019
