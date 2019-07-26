@@ -57,10 +57,10 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 # Scatter plot (After interaction)
 <img src="static/img2/step10.PNG" width="900">
 
-# Conclusions (View)
+# Landing page (Conclusions View)
 <img src="static/img2/step11.PNG" width="900">
 
-# Credits (View)
+# Landing page (Credits View)
 <img src="static/img2/step12.PNG" width="900">
 
 Last updated 7/25/2019
