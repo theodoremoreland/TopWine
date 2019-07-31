@@ -27,6 +27,15 @@ Visualizations:
 
 For our new JavaScript library, we will be using a leaflet plugin called "Leaflet Data Visualization Framework" to create bar chart markers for average price and average rating per state. Here is the GitHub link for this plugin: https://github.com/humangeo/leaflet-dvf.
 
+# Technologies used:
+
+   - IDEs (VS Code and Jupyter Notebook)
+   - Data Wrangling (Ptyhon-Pandas, R)
+   - Storage (SQLite)
+   - Backend (Python-Flask)
+   - Frontend (JavaScript, Bootstrap 4, HTML5/CSS3)
+   - Web Host (AWS)
+
 # Landing page (Default View)
 <img src="static/img2/step1.PNG" width="900">
 
