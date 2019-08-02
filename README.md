@@ -1,6 +1,6 @@
 # Project2Wine
 
-Link to finished product: http://www.project2wine.com/ (currently shut down due to fees)
+Link to finished product: http://www.project2wine.com/ (currently shut down due to cost)
 
 Project Proposal: Visualizing Wine Reviews
 Group Members: Peter Meyers, Andrew Mullenger, Theo Moreland, Danielle Perkins
@@ -35,6 +35,8 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
    - Backend (Python-Flask)
    - Frontend (JavaScript, Bootstrap 4, HTML5/CSS3)
    - Web Host (AWS)
+   
+# Demonstration (<a href="https://www.youtube.com/watch?v=-aHoOTVym0c" target="_blank">click here for video</a>):
 
 # Landing page (Default View)
 <img src="static/img2/step1.PNG" width="900">
@@ -72,4 +74,4 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 # Landing page (Credits View)
 <img src="static/img2/step12.PNG" width="900">
 
-Last updated 7/25/2019
+Last updated 8/2/2019
