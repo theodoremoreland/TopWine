@@ -36,7 +36,7 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
    - Frontend (JavaScript, Bootstrap 4, HTML5/CSS3)
    - Web Host (AWS)
    
-# Demonstration (<a href="https://www.youtube.com/watch?v=-aHoOTVym0c" target="_blank">click here for video</a>):
+# Demonstration (<a href="https://youtu.be/dQ4a4oxju1U" target="_blank">click here for video</a>):
 
 # Landing page (Default View)
 <img src="static/img2/step1.PNG" width="900">
