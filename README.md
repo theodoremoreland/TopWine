@@ -30,7 +30,7 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 # Technologies used:
 
    - IDEs (VS Code and Jupyter Notebook)
-   - Data Wrangling (Ptyhon-Pandas, R)
+   - Data Wrangling (Python-Pandas, R)
    - Storage (SQLite)
    - Backend (Python-Flask)
    - Frontend (JavaScript, Bootstrap 4, HTML5/CSS3)
