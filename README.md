@@ -1,6 +1,5 @@
 # Project2Wine
 
-Link to finished product: http://www.project2wine.com/ (currently shut down due to cost)
 
 Project Proposal: Visualizing Wine Reviews
 Group Members: Peter Meyers, Andrew Mullenger, Theo Moreland, Danielle Perkins
