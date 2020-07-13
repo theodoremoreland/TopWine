@@ -38,39 +38,39 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 # Demonstration:
 
 # Landing page (Default View)
-<img src="static/img2/step1.PNG" width="900">
+<img src="presentation/images/step1.PNG" width="900">
 
 # Landing page (Stats View)
-<img src="static/img2/step2.PNG" width="900">
+<img src="presentation/images/step2.PNG" width="900">
 
 # Statistics page (Summary view)
-<img src="static/img2/step3.PNG" width="900">
+<img src="presentation/images/step3.PNG" width="900">
 
 # Statistics page (Map view)
-<img src="static/img2/step4.PNG" width="900">
+<img src="presentation/images/step4.PNG" width="900">
 
 # Map
-<img src="static/img2/step5.PNG" width="900">
+<img src="presentation/images/step5.PNG" width="900">
 
 # Map (After interaction)
-<img src="static/img2/step6.PNG" width="900">
+<img src="presentation/images/step6.PNG" width="900">
 
 # Statistics page (Bar chart view)
-<img src="static/img2/step7.PNG" width="900">
+<img src="presentation/images/step7.PNG" width="900">
 
 # Bar chart (After interaction)
-<img src="static/img2/step8.PNG" width="900">
+<img src="presentation/images/step8.PNG" width="900">
 
 # Statistics page (Scatter plot view)
-<img src="static/img2/step9.PNG" width="900">
+<img src="presentation/images/step9.PNG" width="900">
 
 # Scatter plot (After interaction)
-<img src="static/img2/step10.PNG" width="900">
+<img src="presentation/images/step10.PNG" width="900">
 
 # Landing page (Conclusions View)
-<img src="static/img2/step11.PNG" width="900">
+<img src="presentation/images/step11.PNG" width="900">
 
 # Landing page (Credits View)
-<img src="static/img2/step12.PNG" width="900">
+<img src="presentation/images/step12.PNG" width="900">
 
 Last updated 8/2/2019
