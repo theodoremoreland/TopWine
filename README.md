@@ -72,5 +72,3 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 
 # Landing page (Credits View)
 <img src="presentation/images/step12.PNG" width="900">
-
-Last updated 8/2/2019
