@@ -1,7 +1,4 @@
 var myData = data;
-
-console.log(myData);
-
 var states;
 var prices;
 var ratings;
@@ -29,8 +26,6 @@ var stateData = {};
 for (i=0; i < states.length; i++) {
     stateData[states[i]] = [prices[i], ratings[i], lats[i], lngs[i]];
 };
-
-console.log(stateData);
 
 //For each state, create two bar indicators (one each for price and rating)
 var barMarkers = [];
@@ -128,11 +123,3 @@ L.control.layers(baseMaps, overlayMaps, {
     collapsed: false,
     position:'topleft'
 }).addTo(myMap);
-
-
-
-
-
-console.log(stateData);
-console.log(myData);
-
