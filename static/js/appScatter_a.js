@@ -2,8 +2,6 @@
 function buildCharts(min, max){ 
     // The dataset we are going to be manipulating
     var wine = data10;
-    // console.log(wine);
-    console.log("HI");
     // then use the max and min values to give only the most useful of data
     var winemin = [];
     wine.forEach(function(w){
@@ -17,8 +15,6 @@ function buildCharts(min, max){
             winerange.push(w);
         }
     });
-
-    console.log(winerange);
 
     // Build a scatter
     // function buildScatter(bottleData) {
@@ -68,7 +64,6 @@ init();
 // Trying to get the new ranges when someone selects it on the scatter plot
 function optionChanged(selectObject) {
     var ranges = selectObject.value;
-    console.log(ranges);
     var maxmin = ranges.split(',')
     var newmin = maxmin[0];
     var newmax = maxmin[1];

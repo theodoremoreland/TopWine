@@ -2,8 +2,6 @@
 function buildCharts(min, max){ 
     // The dataset we are going to be manipulating
     var wine = data10;
-    // console.log(wine);
-    console.log("HI");
     // then use the max and min values to give only the most useful of data
     var winemin = [];
     wine.forEach(function(w){
@@ -17,60 +15,6 @@ function buildCharts(min, max){
             winerange.push(w);
         }
     });
-
-    // var winemin = Object.keys(wine).reduce(function (filtered, key) {
-    //     if (wine.price < max) filtered.price = wine.price;
-    //     return filtered;
-    // });
-
-    // var winemin = Object.keys(wine).filter(function(price) {
-    //     return wine[price] <= max;
-    //     }).map(function(key) {
-    //         return wine[key];
-    // });
-
-
-    // console.log(winemin);
-
-    // The new dataset based on the max and min
-    // Object.keys(winemin).map(function(price, index) {
-    //      winemin[price] >= min;
-    // });
-    // var winerange = Object.assign({}, winemin);
-    // console.log(winemin);
-
-    // Object.keys(winerange).map(function(price, index) {
-    //     winerange[price] <= max;
-    // });
-
-    // var winemin = wine.map(price >= min);
-    // var winerange = winemin.map(price <= max);
-    // console.log(winerange);
-
-    // Create some variables we'll need
-    // var bottle;
-    // var price;
-    // var rating;
-    // var grape;
-    // var designation;
-
-
-    // Object.entries(winerange).forEach(([key, value]) => {
-    //     if (key == 'id') {
-    //         bottle = value;
-    //     } else if (key == 'price'){
-    //         price = value;
-    //     } else if (key =='points'){
-    //         rating = value;
-    //     } else if (key =='grape'){
-    //         grape = value;
-    //     } else if (key =='designation'){
-    //         designation = value;
-    //     }
-    // });
-
-
-  
 
     // Build a scatter
     // function buildScatter(bottleData) {
@@ -87,7 +31,7 @@ function buildCharts(min, max){
             opacity: .2
         },
         }];
-    // }];
+
     var scatterlayout = {
         xaxis: {
             title:{
@@ -120,7 +64,6 @@ init();
 // Trying to get the new ranges when someone selects it on the scatter plot
 function optionChanged(selectObject) {
     var ranges = selectObject.value;
-    console.log(ranges);
     var maxmin = ranges.split(',')
     var newmin = maxmin[0];
     var newmax = maxmin[1];
