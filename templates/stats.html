@@ -1,12 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="text-center">
-        <h1 class="text-black-50 mb-0">Statistics</h1> 
-    </div>
-    <div class="text-center">
-        <h3 class="text-black-50 mb-0">Summary</h3> 
-    </div>
+    <h2 class="text-black-50 mt-5">
+        Summary
+    </h2>
     <div class="container">
         <div class="col">
             <div class="card-container">
@@ -45,42 +42,25 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
-            <div class="mh-100" style= "height: 600px">
-            </div>
-            <div class="col-10" id="top-row">
-                <div class="text-center">
-                    <h3 class="text-black-50 mb-0">Wine by State</h3> 
-                </div>
-                <div id="controls"></div>
-                <div id="map"></div>    
-            </div>
-            <div class="mh-100" style= "height: 600px">
-            </div>
-        </div>
-    </div>
-    <div class="text-center">
-        <h2 class="text-black-50 mb-0">
-            <a href="/map">
+    <h2 class="text-black-50 mb-0">
+        Wine by State
+    </h2> 
+    <div class="container-fluid map-container">
+        <div id="controls"></div>
+        <div id="map"></div>
+        <a href="/map">
+            <p class="text-black-50 mb-0">
                 Click here to enlarge map
-            </a>
-        </h2> 
-    </div> 
-    <div class="container-fluid">
-        <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
-            <div class="col-12" id="top-row">
-                <div class="text-center">
-                    <h3 class="text-black-50 mb-0">Wine by Variety</h3> 
-                </div>
-                <div id="bar-chart"></div>
-            </div>
-        </div>
+            </p>
+        </a> 
     </div>
-    <div class="text-center">
-        <h3 class="text-black-50 mb-0">Price Vs Rating</h3> 
+
+    <div class="container-fluid bar-container">
+        <h2 class="text-black-50 mb-0">Wine by Variety</h2> 
+        <div id="bar-chart"></div>
     </div>
-    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
+    <h2 class="text-black-50 mb-0">Price Vs Rating</h2> 
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-5 scatter-container">
         <div class="col-10">
                 <h5>Select Price Range</h5>
                 <!-- Should be able to select an option from the dropdown menu and the visuals change -->
