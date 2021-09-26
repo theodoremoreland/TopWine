@@ -1,122 +1,92 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div class="text-center">
-        <br>
-        <br>
-        <h1 class="text-black-50 mb-0">Statistics</h1> 
-</div>
-
-<div class="text-center">
-    <br>
-    <h3 class="text-black-50 mb-0">Summary</h3> 
-</div>
-
-<div class="container">
-
-    <div class="col">
-    
-            <div class="card-container">
-            <div class="card">
-                <h4>25 states.</h4>
-                <span class="chev">&rsaquo;</span>
-            </div>
-            </div>
-            
-            <div class="card-container">
-            <div class="card">
-                <h4>10 varieties of wine.</h4>
-                <span class="chev">&rsaquo;</span>
-            </div>
-            </div>
-
-    </div>
-        
-    <div class="col">
-            <div class="card-container">
-            <div class="card">
-                <h4>$45 per 750ml bottle of wine.</h4>
-                <span class="chev">&rsaquo;</span>
-            </div>
-            </div>
-        
-        
-            <div class="card-container">
-            <div class="card">
-                <h4>The average bottle of wine is rated 89/100 by wine critics.</h4>
-                <span class="chev">&rsaquo;</span>
-            </div>
-            </div>
-    </div>
-        
-    <div class="col">
-            <div class="card-container">
-            <div class="card">
-                <h4>2,555 wineries.</h4>
-                <span class="chev">&rsaquo;</span>
-            </div>
-            </div>
-            
-            <div class="card-container">
-            <div class="card">
-                <h4>16,961 rows of data.</h4>
-                <span class="chev">&rsaquo;</span>
-            </div>
-            </div>
-    </div>
-
-</div>
-<div id="taster-profile">
     <div class="text-center">
-            <h3 class="text-black-50 mb-0"></h3> 
+        <h1 class="text-black-50 mb-0">Statistics</h1> 
     </div>
-<div class="row">
-    <div class="col-10">
+    <div class="text-center">
+        <h3 class="text-black-50 mb-0">Summary</h3> 
     </div>
-    <div class="col-2">
-        <ul>
-        </ul>
-    </div>
-</div>
-</div>
-
-
-<div class="container-fluid">
-    <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
-        <div class="mh-100" style= "height: 600px">
+    <div class="container">
+        <div class="col">
+            <div class="card-container">
+                <div class="card">
+                    <h4>25 states.</h4>
+                    <span class="chev">&rsaquo;</span>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h4>10 varieties of wine.</h4>
+                    <span class="chev">&rsaquo;</span>
+                </div>
+            </div>
         </div>
-        <div class="col-10" id="top-row">
-            <div class="text-center">
+        <div class="col">
+            <div class="card-container">
+                <div class="card">
+                    <h4>$45 per 750ml bottle of wine.</h4>
+                    <span class="chev">&rsaquo;</span>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h4>The average bottle of wine is rated 89/100 by wine critics.</h4>
+                    <span class="chev">&rsaquo;</span>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card-container">
+                <div class="card">
+                    <h4>2,555 wineries.</h4>
+                    <span class="chev">&rsaquo;</span>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <h4>16,961 rows of data.</h4>
+                    <span class="chev">&rsaquo;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
+            <div class="mh-100" style= "height: 600px">
+            </div>
+            <div class="col-10" id="top-row">
+                <div class="text-center">
                     <h3 class="text-black-50 mb-0">Wine by State</h3> 
                 </div>
                 <div id="controls"></div>
-            <div id="map"></div>    
-        </div>
-        <div class="mh-100" style= "height: 600px">
+                <div id="map"></div>    
             </div>
+            <div class="mh-100" style= "height: 600px">
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="text-center">
-        <h2 class="text-black-50 mb-0"><a href="/map">Click here to enlarge map</a></h2> 
+    <div class="text-center">
+        <h2 class="text-black-50 mb-0">
+            <a href="/map">
+                Click here to enlarge map
+            </a>
+        </h2> 
     </div> 
-<div class="container-fluid">
-    <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
-        <div class="col-12" id="top-row">
-            <div class="text-center">
-                <h3 class="text-black-50 mb-0">Wine by Variety</h3> 
+    <div class="container-fluid">
+        <div class="row justify-content-center no-gutters mb-0 mb-lg-0">
+            <div class="col-12" id="top-row">
+                <div class="text-center">
+                    <h3 class="text-black-50 mb-0">Wine by Variety</h3> 
+                </div>
+                <div id="bar-chart"></div>
             </div>
-            <div id="bar-chart"></div>
         </div>
     </div>
-</div>
-
-<div class="text-center">
+    <div class="text-center">
         <h3 class="text-black-50 mb-0">Price Vs Rating</h3> 
-</div>
-<div class="row justify-content-center no-gutters mb-5 mb-lg-5">
-
+    </div>
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-5">
         <div class="col-10">
                 <h5>Select Price Range</h5>
                 <!-- Should be able to select an option from the dropdown menu and the visuals change -->
@@ -150,10 +120,11 @@
         </div>
     </div>
 
+    <!-- VARIABLES -->
     <script type="text/javascript">
-        var data = {{ states|tojson }};
-        var data10 = {{ top10|tojson }};
-        var table10 = {{ table10|tojson }};
+        var data = {{ states | tojson }};
+        var data10 = {{ top10 | tojson }};
+        var table10 = {{ table10 | tojson }};
     </script>
 
 
@@ -164,9 +135,12 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
 
     <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-    crossorigin=""></script>
+    <script
+        src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""
+    >
+    </script>
 
     <!-- Plotly Javascript -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
