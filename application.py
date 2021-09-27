@@ -5,6 +5,7 @@ from sqlalchemy.ext.automap import automap_base
 application = Flask(__name__)
 application.config['DEBUG'] = True
 application.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///resources/wine2.SQLite"
+application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 DB = SQLAlchemy(application)
 
