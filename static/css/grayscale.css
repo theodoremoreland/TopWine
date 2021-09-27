@@ -249,10 +249,11 @@ body {
 
 a {
   color: #823db1;
+  text-decoration: underline;
 }
 
 a:focus, a:hover {
-  text-decoration: none;
+
   color: #3c6360;
 }
 

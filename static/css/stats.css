@@ -91,10 +91,6 @@ h4 {
 }
 
 @media (max-width: 1100px) {
-    .container{
-        height: 100vh;
-    }
-
     .col {
         height: 100%;
     }
