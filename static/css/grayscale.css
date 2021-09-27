@@ -247,13 +247,12 @@ body {
   letter-spacing: 0.0625em;
 }
 
-a {
+a > h4 {
   color: #823db1;
   text-decoration: underline;
 }
 
-a:focus, a:hover {
-
+a:focus, a:hover, a > h4 {
   color: #3c6360;
 }
 
