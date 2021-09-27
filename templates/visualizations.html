@@ -54,7 +54,6 @@
             </p>
         </a> 
     </div>
-
     <div class="container-fluid bar-container">
         <h2 class="text-black-50 mb-0">Wine by Variety</h2> 
         <div id="bar-chart"></div>
@@ -90,7 +89,7 @@
                             > $501
                     </option>
                 </select>
-            <p id="scatter"></p>
+            <div id="scatter"></div>
         </div>
     </div>
 
@@ -100,7 +99,6 @@
         var data10 = {{ top10 | tojson }};
         var table10 = {{ table10 | tojson }};
     </script>
-
 
     <!-- D3 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
