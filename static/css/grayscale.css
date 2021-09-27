@@ -277,3 +277,13 @@ footer {
     height: 300px;
     color: white
 }
+
+img#visualizations {
+    border: 4px #823db1 solid;
+    transition: transform 0.7s;
+}
+
+img#visualizations:hover {
+    border: 4px #3c6360 solid;
+    transform: scale(1.01);
+}
