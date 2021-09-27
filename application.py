@@ -48,7 +48,7 @@ def index():
     return render_template("index.html")
 
 
-@application.route("/stats")
+@application.route("/visualizations")
 def stats():
     global results_from_states_query, results_from_reviews_query
     extracted_reviews_list = []
@@ -102,7 +102,7 @@ def stats():
         "description" : description
     }
 
-    return render_template("stats.html", states=extracted_states_dict, top10=extracted_reviews_list, table10=extracted_reviews_dict)
+    return render_template("visualizations.html", states=extracted_states_dict, top10=extracted_reviews_list, table10=extracted_reviews_dict)
 
 
 @application.route("/map")
