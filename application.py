@@ -1,17 +1,9 @@
 from flask import (Flask, render_template)
-
 from flask_sqlalchemy import SQLAlchemy
-
-import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
-from sqlalchemy.orm import Session
-from sqlalchemy import create_engine
-from sqlalchemy import inspect
 
 application = Flask(__name__)
 application.config['DEBUG'] = True
-
-# The database URI
 application.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///resources/wine2.SQLite"
 
 DB = SQLAlchemy(application)
@@ -23,31 +15,31 @@ Base = automap_base()
 Base.prepare(DB.engine, reflect=True)
 
 # Save references to each table
-States = Base.classes.States
-Top10 = Base.classes.Top10
+StatesModel = Base.classes.States
+ReviewsModel = Base.classes.Top10
 
 # Create database tables
 @application.before_first_request
 def setup():
-    global States_table_data, Top10_table_data
+    global results_from_states_query, results_from_reviews_query
 
     DB.create_all()
 
-    States_table_data = DB.session.query(States.province
-                                        , States.avg_price
-                                        , States.avg_score
-                                        , States.Latitude
-                                        , States.Longitude).all()
+    results_from_states_query = DB.session.query(StatesModel.province
+                                        , StatesModel.avg_price
+                                        , StatesModel.avg_score
+                                        , StatesModel.Latitude
+                                        , StatesModel.Longitude).all()
 
-    Top10_table_data = DB.session.query(Top10.id
-                                        , Top10.price
-                                        , Top10.points
-                                        , Top10.variety
-                                        , Top10.designation
-                                        , Top10.taster_name
-                                        , Top10.taster_twitter_handle
-                                        , Top10.winery
-                                        , Top10.description).all()
+    results_from_reviews_query = DB.session.query(ReviewsModel.id
+                                        , ReviewsModel.price
+                                        , ReviewsModel.points
+                                        , ReviewsModel.variety
+                                        , ReviewsModel.designation
+                                        , ReviewsModel.taster_name
+                                        , ReviewsModel.taster_twitter_handle
+                                        , ReviewsModel.winery
+                                        , ReviewsModel.description).all()
 
 
 @application.route("/")
@@ -57,40 +49,27 @@ def index():
 
 @application.route("/stats")
 def stats():
-    global States_table_data, Top10_table_data
+    global results_from_states_query, results_from_reviews_query
+    extracted_reviews_list = []
 
-    # Create lists from the query States_table_data
-    state = [row[0] for row in States_table_data]
-    price = [row[1] for row in States_table_data]
-    score = [row[2] for row in States_table_data]
-    lat = [row[3] for row in States_table_data]
-    lng = [row[4] for row in States_table_data]
+    for row in results_from_reviews_query:
+        review_metadata = {}
+        review_metadata["ids"] = row[0]
+        review_metadata["price"] = row[1]
+        review_metadata["points"] = row[2]
+        review_metadata["variety"] = row[3]
+        review_metadata["designation"] = row[4]
+        extracted_reviews_list.append(review_metadata)
 
-
-    # Create lists from the query Top10_table_data
-    ids = [row[0] for row in Top10_table_data]
-    price = [int(row[1]) for row in Top10_table_data]
-    points = [int(row[2]) for row in Top10_table_data]
-    variety = [row[3] for row in Top10_table_data]
-    designation = [row[4] for row in Top10_table_data]
-    taster_name = [row[5] for row in Top10_table_data]
-    taster_twitter_handle = [row[6] for row in Top10_table_data]
-    winery = [row[7] for row in Top10_table_data]
-    description = [row[8] for row in Top10_table_data]
-
-
-    top10 = []
-    for row in Top10_table_data:
-        sample_metadata = {}
-        sample_metadata["ids"] = row[0]
-        sample_metadata["price"] = row[1]
-        sample_metadata["points"] = row[2]
-        sample_metadata["variety"] = row[3]
-        sample_metadata["designation"] = row[4]
-        top10.append(sample_metadata)
+    # Create lists from the results_from_states_query
+    state = [row[0] for row in results_from_states_query]
+    price = [row[1] for row in results_from_states_query]
+    score = [row[2] for row in results_from_states_query]
+    lat = [row[3] for row in results_from_states_query]
+    lng = [row[4] for row in results_from_states_query]
 
     # Generate the plot trace
-    states = {
+    extracted_states_dict = {
         "state": state,
         "avg_price": price,
         "avg_score": score,
@@ -98,7 +77,19 @@ def stats():
         "lng": lng
     }
 
-    table10 = {
+    # Create lists from results_from_reviews_query
+    ids = [row[0] for row in results_from_reviews_query]
+    price = [int(row[1]) for row in results_from_reviews_query]
+    points = [int(row[2]) for row in results_from_reviews_query]
+    variety = [row[3] for row in results_from_reviews_query]
+    designation = [row[4] for row in results_from_reviews_query]
+    taster_name = [row[5] for row in results_from_reviews_query]
+    taster_twitter_handle = [row[6] for row in results_from_reviews_query]
+    winery = [row[7] for row in results_from_reviews_query]
+    description = [row[8] for row in results_from_reviews_query]
+
+    # Generate the plot trace
+    extracted_reviews_dict = {
         "id": ids,
         "price": price,
         "points": points,
@@ -110,22 +101,22 @@ def stats():
         "description" : description
     }
 
-    return render_template("stats.html", states=states, top10=top10, table10=table10)
+    return render_template("stats.html", states=extracted_states_dict, top10=extracted_reviews_list, table10=extracted_reviews_dict)
 
 
 @application.route("/map")
 def map():
-    global States_table_data
+    global results_from_states_query
 
-    # Create lists from the query States_table_data
-    state = [row[0] for row in States_table_data]
-    price = [row[1] for row in States_table_data]
-    score = [row[2] for row in States_table_data]
-    lat = [row[3] for row in States_table_data]
-    lng = [row[4] for row in States_table_data]
+    # Create lists from the query results_from_states_query
+    state = [row[0] for row in results_from_states_query]
+    price = [row[1] for row in results_from_states_query]
+    score = [row[2] for row in results_from_states_query]
+    lat = [row[3] for row in results_from_states_query]
+    lng = [row[4] for row in results_from_states_query]
 
     # Generate the plot trace
-    states = {
+    extracted_states_dict = {
         "state": state,
         "avg_price": price,
         "avg_score": score,
@@ -133,7 +124,7 @@ def map():
         "lng": lng
     }
 
-    return render_template("map.html", states=states)
+    return render_template("map.html", states=extracted_states_dict)
 
 
 @application.route("/credits")
