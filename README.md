@@ -37,7 +37,7 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 <img src="presentation/1.PNG" width="200">
 
 # Landing page - View #1 (Desktop)
-<img src="presentation/2.PNG" width="800">
+<img src="presentation/2.png" width="800">
 
 # Landing page - View #2 (Desktop)
 <img src="presentation/3.PNG" width="800">
