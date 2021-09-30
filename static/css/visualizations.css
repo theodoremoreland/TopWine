@@ -93,13 +93,38 @@ h1, h2, h3 {
     justify-content: center;
     height: 200px;
     padding: 13px 21px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.739),
+                 0px 8px 13px rgba(0, 0, 0, 0.863),
+                 0px 18px 23px rgba(0, 0, 0, 0.945);
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-    transition: transform 0.1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.card:hover {
-    transform: scale(1.01);
+.card.c1 {
+    background-image: url("../img/barrel.jpg");
+}
+
+.card.c2 {
+    background-image: url("../img/price.jpg");
+}
+
+.card.c3 {
+    background-image: url("../img/cheese.jpg");
+}
+
+.card.c4 {
+    background-image: url("../img/reviewers.jpg");
+}
+
+.card.c5 {
+    background-image: url("../img/close.jpg");
+}
+
+.card.c6 {
+    background-image: url("../img/clouds1.jpg");
 }
 
 h4 {
