@@ -23,7 +23,7 @@ Object.entries(myData).forEach(([key, value]) => {
 var stateData = {};
 
 //Create new object with states as keys and info as values
-for (i=0; i < states.length; i++) {
+for (let i = 0; i < states.length; i++) {
     stateData[states[i]] = [prices[i], ratings[i], lats[i], lngs[i]];
 };
 
@@ -91,16 +91,18 @@ var barLayer = L.layerGroup(barMarkers);
 var stateLayer = L.layerGroup(stateMarkers);
 
 //Create title layers for light and dark maps
-var darkMap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-    maxZoom: 5.5,
-    minZoom: 3,
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+var darkMap = L.tileLayer('https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+	attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	minZoom: 3,
+	maxZoom: 5.5,
+	accessToken: API_KEY
 });
 
-var lightMap = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
-    maxZoom: 5.5,
-    minZoom: 3,
-    attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+var lightMap = L.tileLayer('https://{s}.tile.jawg.io/jawg-light/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
+	attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	minZoom: 3,
+	maxZoom: 5.5,
+	accessToken: API_KEY
 });
 
 var overlayMaps = {
