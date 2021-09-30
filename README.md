@@ -33,38 +33,32 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
    
 # Demonstration:
 
-# Landing page (Default View)
-<img src="presentation/step1.PNG" width="900">
+# Landing page - View #1 (Mobile)
+<img src="presentation/1.PNG" width="200">
 
-# Landing page (Stats View)
-<img src="presentation/step2.PNG" width="900">
+# Landing page - View #1 (Desktop)
+<img src="presentation/2.PNG" width="800">
 
-# Statistics page (Summary view)
-<img src="presentation/step3.PNG" width="900">
+# Landing page - View #2 (Desktop)
+<img src="presentation/3.PNG" width="800">
 
-# Statistics page (Map view)
-<img src="presentation/step4.PNG" width="900">
+# Landing page - View #3 (Desktop)
+<img src="presentation/4.PNG" width="800">
 
-# Map
-<img src="presentation/step5.PNG" width="900">
+# Landing page - View #4 (Desktop)
+<img src="presentation/5.PNG" width="800">
 
-# Map (After interaction)
-<img src="presentation/step6.PNG" width="900">
+# Visualizations page - View #1 (Desktop)
+<img src="presentation/6.PNG" width="800">
 
-# Statistics page (Bar chart view)
-<img src="presentation/step7.PNG" width="900">
+# Visualizations page - View #2 (Desktop)
+<img src="presentation/7.PNG" width="800">
 
-# Bar chart (After interaction)
-<img src="presentation/step8.PNG" width="900">
+# Visualizations page - View #3 (Desktop)
+<img src="presentation/8.PNG" width="800">
 
-# Statistics page (Scatter plot view)
-<img src="presentation/step9.PNG" width="900">
+# Visualizations page - View #4 (Desktop)
+<img src="presentation/9.PNG" width="800">
 
-# Scatter plot (After interaction)
-<img src="presentation/step10.PNG" width="900">
-
-# Landing page (Conclusions View)
-<img src="presentation/step11.PNG" width="900">
-
-# Landing page (Credits View)
-<img src="presentation/step12.PNG" width="900">
+# Credits page (Desktop)
+<img src="presentation/10.PNG" width="800">
