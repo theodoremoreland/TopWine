@@ -15,7 +15,7 @@ Our goal for this project is to create a set of visualizations to show how wine 
 
 ### Group Members:
 
-Peter Meyers, Andrew Mullenger, Theo Moreland, Danielle Perkins
+Peter Meyers, Andrew Mullenger, Theodore Moreland, Danielle Perkins
 
 ### Key Questions:
 
@@ -44,6 +44,8 @@ For our new JavaScript library, we will be using a leaflet plugin called "Leafle
 Link to Dataset: https://www.kaggle.com/zynicide/wine-reviews/version/4?
 
 # Technologies used:
+
+Python version `3.8` (`3.8.10` specifically) works for the current packages used in `requirements.txt`. Conversely, Python `3.11` does not work and will require an updated to the aforementioned packages to resolve version conflicts.
 
 - Data Wrangling (Python, Pandas, R)
 - Storage (SQLite)
