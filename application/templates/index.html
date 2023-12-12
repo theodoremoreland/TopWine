@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,11 +18,14 @@
         <!-- Custom fonts for this template -->
         <link href="static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <link href="static/css/grayscale.css" rel="stylesheet">
     </head>
+
     <body id="page-top">
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -29,15 +33,9 @@
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">
                     Home
                 </a>
-                <button
-                    class="navbar-toggler navbar-toggler-right"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
@@ -67,7 +65,8 @@
                         Top Wine
                     </h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">
-                        Visualizations and analysis of wine quality based on reviews from the country's top 10 wine critics.
+                        Visualizations and analysis of wine quality based on reviews from the country's top 10 wine
+                        critics.
                     </h2>
                     <a href="#visualizations" class="btn btn-primary js-scroll-trigger">
                         Continue
@@ -82,12 +81,8 @@
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
                     <div class="col-xl-8 col-lg-7">
                         <a href="/visualizations">
-                            <img
-                                id="visualizations"
-                                class="img-fluid mb-3 mb-lg-0"
-                                src="{{ url_for('static', filename='img/bg-bottle.jpg') }}"
-                                alt=""
-                            >
+                            <img id="visualizations" class="img-fluid mb-3 mb-lg-0"
+                                src="{{ url_for('static', filename='img/bg-bottle.jpg') }}" alt="">
                         </a>
                     </div>
                     <div class="col-xl-4 col-lg-5">
@@ -97,7 +92,8 @@
                                     Visualizations
                                 </h4>
                             </a>
-                            <p class="text-black-50 mb-0">Click to view a map, bar graph, and scatter plot visualizing wine ratings.</p>
+                            <p class="text-black-50 mb-0">Click to view a map, bar graph, and scatter plot visualizing
+                                wine ratings.</p>
                         </div>
                     </div>
                 </div>
@@ -108,19 +104,27 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100" >
-                                <div class="project-text w-100 my-auto text-center text-lg-left"  id="conclusions">
-                                    <h4 class="text-white" >Conclusions</h4>
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left" id="conclusions">
+                                    <h4 class="text-white">Conclusions</h4>
                                     <p class="mb-0 text-white-50">
-                                        * There are three states which clearly produce higher-value wines: Iowa, Ohio, and Connecticut. The rating-to-price ratio in these states is significantly higher than states like California, which are well-known for their wines.
+                                        * There are three states which clearly produce higher-value wines: Iowa, Ohio,
+                                        and Connecticut. The rating-to-price ratio in these states is significantly
+                                        higher than states like California, which are well-known for their wines.
                                     </p>
                                     <br>
                                     <p class="mb-0 text-white-50">
-                                        * Across wine varieties, average prices and ratings do not vary significantly. If you have a favorite wine variety, you don’t need to worry about missing out on value since there aren’t major differences across the most popular wine types.
+                                        * Across wine varieties, average prices and ratings do not vary significantly.
+                                        If you have a favorite wine variety, you don’t need to worry about missing out
+                                        on value since there aren’t major differences across the most popular wine
+                                        types.
                                     </p>
                                     <br>
                                     <p class="mb-0 text-white-50">
-                                        * In general, there isn’t a strong correlation between wine prices and ratings. Even in different price brackets, a wine’s price isn’t related to its rating in a meaningful way. Therefore, we are happy to report that you don’t need to spend a fortune to enjoy nice wine!
+                                        * In general, there isn’t a strong correlation between wine prices and ratings.
+                                        Even in different price brackets, a wine’s price isn’t related to its rating in
+                                        a meaningful way. Therefore, we are happy to report that you don’t need to spend
+                                        a fortune to enjoy nice wine!
                                     </p>
                                     <hr class="d-none d-lg-block mb-0 ml-0">
                                 </div>
@@ -156,7 +160,7 @@
             </div>
         </section>
         <footer id="github" class="contact-section bg-black">
-            <a href="https://github.com/theodoremoreland/WineDataWebsite" class="mx-2" target="_blank">
+            <a href="https://github.com/theodoremoreland/TopWine" class="mx-2" target="_blank">
                 <i class="fab fa-github fa-3x"></i>
             </a>
             <h5>View code on GitHub</h5>
@@ -172,4 +176,5 @@
         <!-- Custom scripts for this template -->
         <script src="static/js/grayscale.min.js"></script>
     </body>
+
 </html>
