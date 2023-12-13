@@ -12,6 +12,9 @@ Visualizations and analysis of wine quality based on reviews from the country's 
   - [Visualizations](#visualizations)
   - [Dataset](#dataset)
 - [Technologies Used](#technologies-used)
+- [How to run locally](#how-to-run-locally)
+  - [Run on Windows](#run-on-windows)
+  - [Run on Docker](#run-on-docker)
 - [Screenshots](#screenshots)
 
 # Overview
@@ -56,7 +59,75 @@ Python version `3.8` (`3.8.10` specifically) works for the current packages used
 - Storage (SQLite)
 - Backend (Python, Flask)
 - Frontend (JavaScript, Bootstrap 4, HTML5/CSS3)
+- Containerization (Docker)
 - Web Host (AWS)
+
+# How to run locally
+
+Whether you are running the app directly on a Windows OS or indirectly via Docker, there are a few things you need to do in order to setup the application:
+
+- Create your own Open Street Map account and API key @ https://www.openstreetmap.org/user/new
+- Create a file named `apiKey.js` and place it in the `application/static/js` folder.
+- Copy the contents of `apiKey.example.js` into the `apiKey.js` file you just created wherein the value of `const API_KEY` is your Open Street Map api key.
+
+- If you are trying to run this application directly on a Windows OS, you will need to install `Python 3.8`.
+- Otherwise, you will need to install Docker so you can run the application through Docker.
+
+## Run on Windows
+
+Assumes you are using a modern Windows client OS such as Windows 11 or Windows 10 and that Python 3.8 is installed.
+
+**It is assumed the user is at the root of this project and is using a UNIX style command line environment when referencing the CLI commands below.**
+
+Open terminal at root of this project then move into application/ directory:
+
+```
+cd application/
+```
+
+Create venv folder in application folder using Python 3.8:
+
+```
+python3.8 -m venv venv
+```
+
+Activate venv:
+
+```
+source venv/Scripts/activate
+```
+
+Install python packages to venv:
+
+```
+pip install -r requirements.txt
+```
+
+Start application:
+
+```
+python application.py
+```
+
+## Run on Docker
+
+Firstly, confirm that Docker is installed and running. Next confirm that no other application is using port `5000` as port `5000` is needed for the Flask server. If you need to run Flask on an alternative port, you can modify the last line in the `application/application.py` file.
+
+**It is assumed the user is at the root of this project and is using a UNIX style command line environment when referencing the CLI commands below.**
+
+Open terminal at root of this project then move into docker/ directory:
+
+```
+cd docker/
+```
+
+Build Docker image and start Docker container:
+
+```
+docker compose up --build
+```
+
+Visit: http://localhost:5000 to use the application.
 
 # Screenshots:
 

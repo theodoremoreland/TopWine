@@ -1,11 +1,11 @@
-from flask import (Flask, render_template)
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.automap import automap_base
 
 application = Flask(__name__)
-application.config['DEBUG'] = True
-application.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///db/wine2.SQLite"
-application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+application.config["DEBUG"] = True
+application.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/wine2.SQLite"
+application.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 DB = SQLAlchemy(application)
 
@@ -19,6 +19,7 @@ Base.prepare(DB.engine, reflect=True)
 StatesModel = Base.classes.States
 ReviewsModel = Base.classes.Top10
 
+
 # Create database tables
 @application.before_first_request
 def setup():
@@ -26,21 +27,25 @@ def setup():
 
     DB.create_all()
 
-    results_from_states_query = DB.session.query(StatesModel.province
-                                        , StatesModel.avg_price
-                                        , StatesModel.avg_score
-                                        , StatesModel.Latitude
-                                        , StatesModel.Longitude).all()
+    results_from_states_query = DB.session.query(
+        StatesModel.province,
+        StatesModel.avg_price,
+        StatesModel.avg_score,
+        StatesModel.Latitude,
+        StatesModel.Longitude,
+    ).all()
 
-    results_from_reviews_query = DB.session.query(ReviewsModel.id
-                                        , ReviewsModel.price
-                                        , ReviewsModel.points
-                                        , ReviewsModel.variety
-                                        , ReviewsModel.designation
-                                        , ReviewsModel.taster_name
-                                        , ReviewsModel.taster_twitter_handle
-                                        , ReviewsModel.winery
-                                        , ReviewsModel.description).all()
+    results_from_reviews_query = DB.session.query(
+        ReviewsModel.id,
+        ReviewsModel.price,
+        ReviewsModel.points,
+        ReviewsModel.variety,
+        ReviewsModel.designation,
+        ReviewsModel.taster_name,
+        ReviewsModel.taster_twitter_handle,
+        ReviewsModel.winery,
+        ReviewsModel.description,
+    ).all()
 
 
 @application.route("/")
@@ -75,7 +80,7 @@ def stats():
         "avg_price": price,
         "avg_score": score,
         "lat": lat,
-        "lng": lng
+        "lng": lng,
     }
 
     # Create lists from results_from_reviews_query
@@ -94,15 +99,20 @@ def stats():
         "id": ids,
         "price": price,
         "points": points,
-        "grape" : variety,
-        "designation" : designation,
-        "taster_name" : taster_name,
+        "grape": variety,
+        "designation": designation,
+        "taster_name": taster_name,
         "taster_twitter_handle": taster_twitter_handle,
         "winery": winery,
-        "description" : description
+        "description": description,
     }
 
-    return render_template("visualizations.html", states=extracted_states_dict, top10=extracted_reviews_list, table10=extracted_reviews_dict)
+    return render_template(
+        "visualizations.html",
+        states=extracted_states_dict,
+        top10=extracted_reviews_list,
+        table10=extracted_reviews_dict,
+    )
 
 
 @application.route("/map")
@@ -122,7 +132,7 @@ def map():
         "avg_price": price,
         "avg_score": score,
         "lat": lat,
-        "lng": lng
+        "lng": lng,
     }
 
     return render_template("map.html", states=extracted_states_dict)
@@ -134,4 +144,4 @@ def credits():
 
 
 if __name__ == "__main__":
-    application.run()
+    application.run(host="0.0.0.0", port=5000)
