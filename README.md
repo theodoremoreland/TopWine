@@ -53,7 +53,7 @@ Link to Dataset: https://www.kaggle.com/zynicide/wine-reviews/version/4?
 
 # Technologies used:
 
-Python version `3.8` (`3.8.10` specifically) works for the current packages used in `requirements.txt`. Conversely, other versions such as Python `3.11` were tested and do not work thus will require an updated to the aforementioned packages to resolve version conflicts.
+Python version `3.8` (`3.8.10` specifically) was tested and works for the current packages used in `requirements.txt`. Conversely, other versions such as Python `3.11` were tested and do not work thus will require an update to the aforementioned packages to resolve version conflicts.
 
 - Data Wrangling (Python, Pandas, R)
 - Storage (SQLite)
