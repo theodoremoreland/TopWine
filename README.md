@@ -7,7 +7,7 @@ Visualizations and analysis of wine quality based on reviews from the country's 
 ## Table of contents
 
 - [Overview](#overview)
-  - [Group members](#group-members)
+  - [The team](#the-team-by-github-username)
   - [Key questions](#key-questions)
   - [Visualizations](#visualizations)
   - [Dataset](#dataset)
@@ -21,9 +21,12 @@ Visualizations and analysis of wine quality based on reviews from the country's 
 
 Our goal for this project is to create a set of visualizations to show how wine varieties, pricing, and ratings vary by location in the United States. We also want to show how ratings and price differ between wine varieties. The data set we are using comes from a web scraping project that sourced data points on individual wines from WineEnthusiast back in 2017. The data points collected include country of origin, description, points (rating), region, price, variety, etc.
 
-### Group Members:
+### The team (by GitHub username)
 
-Peter Meyers, Andrew Mullenger, Theodore Moreland, Danielle Perkins
+- [@amullenger](https://github.com/amullenger)
+- [@petersmyers](https://github.com/petersmyers)
+- [@dperkins2315](https://github.com/dperkins2315)
+- [@theodoremoreland](https://github.com/theodoremoreland)
 
 ### Key Questions:
 
