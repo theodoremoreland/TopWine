@@ -79,11 +79,13 @@
             <div class="container">
                 <!-- Featured Route Row -->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7">
-                        <a href="/visualizations">
-                            <img id="visualizations" class="img-fluid mb-3 mb-lg-0"
-                                src="{{ url_for('static', filename='img/bg-bottle.jpg') }}" alt="">
+                    <div id="visualizations-image-container" class="col-xl-8 col-lg-7">
+                        <a title="Click here to view visualizations" id="visualizations-link" href="/visualizations">
+                            Click here to view visualizations
                         </a>
+                        <img id="visualizations" class="img-fluid mb-3 mb-lg-0"
+                            src="{{ url_for('static', filename='img/bg-bottle.jpg') }}" alt="wine bottle image">
+                        </img>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">

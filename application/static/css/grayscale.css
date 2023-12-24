@@ -23,7 +23,7 @@
 #mainNav .navbar-brand {
   color: #161616;
   font-weight: 700;
-  padding: .9rem 0;
+  padding: 0.9rem 0;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -32,7 +32,8 @@
   background-color: transparent;
 }
 
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
+#mainNav .navbar-nav .nav-item:active,
+#mainNav .navbar-nav .nav-item:focus {
   outline: none;
   background-color: transparent;
 }
@@ -48,7 +49,7 @@
   }
 
   #mainNav .navbar-brand {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
 
@@ -74,7 +75,7 @@
   #mainNav.navbar-shrink .navbar-brand {
     color: #161616;
   }
-  
+
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
     padding: 1.5rem 1.5rem 1.25rem;
@@ -102,8 +103,22 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(75%, rgba(22, 22, 22, 0.7)), to(#161616)), url("../img/bg-bottle.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../img/bg-bottle.jpg");
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(22, 22, 22, 0.3)),
+      color-stop(75%, rgba(22, 22, 22, 0.7)),
+      to(#161616)
+    ),
+    url("../img/bg-bottle.jpg");
+  background: linear-gradient(
+      to bottom,
+      rgba(22, 22, 22, 0.3) 0%,
+      rgba(22, 22, 22, 0.7) 75%,
+      #161616 100%
+    ),
+    url("../img/bg-bottle.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -111,11 +126,14 @@
 }
 
 .masthead h1 {
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   font-size: 2.5rem;
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  background: -webkit-linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+  );
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -137,7 +155,7 @@
     height: 100vh;
     padding: 0;
   }
-  
+
   .masthead h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;
@@ -154,10 +172,10 @@
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   font-size: 80%;
   text-transform: uppercase;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   border: 0;
 }
 
@@ -180,8 +198,20 @@
 
 .about-section {
   padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#161616),
+    color-stop(75%, rgba(22, 22, 22, 0.9)),
+    to(rgba(22, 22, 22, 0.8))
+  );
+  background: linear-gradient(
+    to bottom,
+    #161616 0%,
+    rgba(22, 22, 22, 0.9) 75%,
+    rgba(22, 22, 22, 0.8) 100%
+  );
 }
 
 .about-section p {
@@ -215,7 +245,7 @@
 
   .projects-section .project-text hr {
     border-color: #823db1;
-    border-width: .25rem;
+    border-width: 0.25rem;
     width: 30%;
   }
 }
@@ -231,7 +261,7 @@
 
 .contact-section .card h4 {
   font-size: 0.8rem;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   text-transform: uppercase;
   letter-spacing: 0.15rem;
 }
@@ -243,7 +273,7 @@
 }
 
 body {
-  font-family: 'Nunito';
+  font-family: "Nunito";
   letter-spacing: 0.0625em;
 }
 
@@ -252,7 +282,9 @@ a > h4 {
   text-decoration: underline;
 }
 
-a:focus, a:hover, a > h4 {
+a:focus,
+a:hover,
+a > h4 {
   color: #3c6360;
 }
 
@@ -269,21 +301,44 @@ a:focus, a:hover, a > h4 {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 0;
-    height: 300px;
-    color: white
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  height: 300px;
+  color: white;
 }
 
 img#visualizations {
-    border: 4px #823db1 solid;
-    transition: transform 0.7s;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 4px #823db1 solid;
+  transition: transform 0.7s;
 }
 
-img#visualizations:hover {
-    border: 4px #3c6360 solid;
-    transform: scale(1.01);
+#visualizations-link:hover,
+#visualizations-link:hover ~ img#visualizations {
+  transform: scale(1.01);
+}
+
+#visualizations-link {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 4px #823db1 solid;
+  background-color: #16161638;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.7s;
 }
