@@ -316,6 +316,7 @@ img#visualizations {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  min-height: 280px;
   transition: transform 0.7s;
 }
 
