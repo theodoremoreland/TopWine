@@ -316,7 +316,6 @@ img#visualizations {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 4px #823db1 solid;
   transition: transform 0.7s;
 }
 
@@ -340,5 +339,9 @@ img#visualizations {
   background-color: #16161638;
   color: #fff;
   font-size: 1.5rem;
-  transition: transform 0.7s;
+  transition: transform 0.7s, background-color 0.7s;
+}
+
+#visualizations-link:hover {
+  background-color: #161616ae;
 }
