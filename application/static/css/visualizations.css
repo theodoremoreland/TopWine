@@ -1,5 +1,11 @@
 :root {
-  --v-width: clamp(280px, 85%, 1440px);
+  --v-width: clamp(200px, 100%, 1440px);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --v-width: clamp(280px, 85%, 1440px);
+  }
 }
 
 html,
@@ -44,6 +50,7 @@ h3 {
   justify-content: center;
   width: var(--v-width);
   height: 550px;
+  padding: 0 !important;
 }
 
 #bar-chart {
@@ -85,7 +92,6 @@ h3 {
   /* width: calc(100% - 25px); */
   height: calc(33.3% - 25px);
   margin: 17px;
-
   text-align: center;
 }
 

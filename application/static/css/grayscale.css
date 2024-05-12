@@ -1,4 +1,4 @@
-/*!
+/*
  * Start Bootstrap - Grayscale v5.0.6 (https://startbootstrap.com/template-overviews/grayscale)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
@@ -250,10 +250,6 @@
   }
 }
 
-.contact-section {
-  padding: 5rem 0 0;
-}
-
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #823db1;
@@ -305,8 +301,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
-  height: 300px;
+  padding: 3rem 0;
   color: white;
 }
 
