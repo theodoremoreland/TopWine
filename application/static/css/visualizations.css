@@ -23,7 +23,7 @@ h3 {
 .map-container {
   width: var(--v-width);
   height: 575px;
-  padding: 0 25px !important;
+  padding: 0 30px !important;
 }
 
 @media screen and (min-width: 768px) {
