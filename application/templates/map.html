@@ -1,29 +1,29 @@
- <!DOCTYPE html>
- <html>
-     <head>
-         <title>
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
             Top Wine (Map)
-         </title>
+        </title>
 
         <!-- <a target="_blank" href="https://icons8.com/icon/UKe62kB0eYkQ/wine">Wine</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
         <link rel="icon" type="image/png" href="../static/img/favicon.png">
-       
-         <!-- Google Font -->
-         <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
-       
-         <!-- Leaflet CSS -->
-         <link
-            rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-            integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-            crossorigin=""
-         />
 
-         <!-- Map & Bar Icons -->
-         <link rel="stylesheet" href="static/css/dvf.css">
-         <link rel="stylesheet" href="static/css/map.css">
-     </head>     
-     <body>
-        <div id="map"></div>
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+
+        <!-- Leaflet CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+            integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+            crossorigin="" />
+
+        <!-- Map & Bar Icons -->
+        <link rel="stylesheet" href="static/css/dvf.css">
+        <link rel="stylesheet" href="static/css/map.css">
+    </head>
+
+    <body>
+        <div id="map" class="fullscreen"></div>
 
         <script type="text/javascript">
             var data = {{ states | tojson }};
@@ -34,15 +34,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
 
         <!-- MomentJS -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+        <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
 
         <!-- Leaflet JavaScript -->
-        <script
-            src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
             integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-            crossorigin=""
-        >
-        </script>
+            crossorigin="">
+            </script>
 
         <!-- Icons -->
         <script src="static/js/leaflet-dvf.markers.js"></script>
@@ -56,4 +55,5 @@
         <!-- Javascript files must go in the static/js folder -->
         <script type="text/javascript" src="static/js/map.js"></script>
     </body>
+
 </html>

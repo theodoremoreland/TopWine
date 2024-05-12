@@ -1,13 +1,16 @@
 /* remove default margin and padding from body */
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-  
+
 /* set map, body, and html to 100% of the screen size */
-html,
-body,
 #map {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+#map.fullscreen {
+  height: 100vh;
+  width: 100vw;
 }
