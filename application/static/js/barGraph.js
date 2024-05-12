@@ -59,6 +59,6 @@ var trace2 = {
 
 var data = [trace1, trace2];
 
-var layout = { barmode: "group" };
+var layout = { barmode: "group", showlegend: false };
 
 Plotly.newPlot("bar-chart", data, layout, { responsive: true });
