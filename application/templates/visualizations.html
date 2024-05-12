@@ -1,133 +1,131 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2 class="text-black-50 mt-5">
-        Summary of dataset
-    </h2>
-    <div class="container">
-        <div class="col">
-            <div class="card-container">
-                <div class="card c1">
-                    <h4>25 states.</h4>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card c2">
-                    <h4>10 varieties of wine.</h4>
-                </div>
+<h2 class="text-black-50 mt-5">
+    Summary of dataset
+</h2>
+<div class="container">
+    <div class="col">
+        <div class="card-container">
+            <div class="card c1">
+                <h4>25 states.</h4>
             </div>
         </div>
-        <div class="col">
-            <div class="card-container">
-                <div class="card c3">
-                    <h4>$45 per 750ml bottle of wine.</h4>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card c4">
-                    <h4>The average bottle of wine is rated 89/100 by wine critics.</h4>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card-container">
-                <div class="card c5">
-                    <h4>2,555 wineries.</h4>
-                </div>
-            </div>
-            <div class="card-container">
-                <div class="card c6">
-                    <h4>16,961 rows of data.</h4>
-                </div>
+        <div class="card-container">
+            <div class="card c2">
+                <h4>10 varieties of wine.</h4>
             </div>
         </div>
     </div>
-    <h2 class="text-black-50 mb-0">
-        Wine by State
-    </h2> 
-    <div class="container-fluid map-container">
-        <div id="controls"></div>
-        <div id="map"></div>
-        <a href="/map">
-            <p class="text-black-50 mb-0">
-                Click here to enlarge map
-            </p>
-        </a> 
-    </div>
-    <div class="container-fluid bar-container">
-        <h2 class="text-black-50 mb-0">Wine by Variety</h2> 
-        <div id="bar-chart"></div>
-    </div>
-    <h2 class="text-black-50 mb-0">Price Vs Rating</h2> 
-    <div class="row justify-content-center no-gutters mb-5 mb-lg-5 scatter-container">
-        <div class="col-10">
-                <h5>Select Price Range</h5>
-                <!-- Should be able to select an option from the dropdown menu and the visuals change -->
-                <select id="selDataset" onchange="optionChanged(this)">
-                    <option value = "0,100000">
-                            All The Wine
-                    </option>
-                    <option value = "0,10">
-                            $0-$10
-                    </option>
-                    <option value = "11,20">
-                            $11-$20
-                    </option>
-                    <option value = "21,50">
-                            $21-$50
-                    </option>
-                    <option value = "51,100">
-                            $51-$100
-                    </option>
-                    <option value = "101,200">
-                            $101-$200
-                    </option>
-                    <option value = "201,500">
-                            $201-$500
-                    </option>
-                    <option value = "501, 100000">
-                            > $501
-                    </option>
-                </select>
-            <div id="scatter"></div>
+    <div class="col">
+        <div class="card-container">
+            <div class="card c3">
+                <h4>$45 per 750ml bottle of wine.</h4>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card c4">
+                <h4>The average bottle of wine is rated 89/100 by wine critics.</h4>
+            </div>
         </div>
     </div>
+    <div class="col">
+        <div class="card-container">
+            <div class="card c5">
+                <h4>2,555 wineries.</h4>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card c6">
+                <h4>16,961 rows of data.</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="text-black-50 mb-0">
+    Wine by State
+</h2>
+<div class="container-fluid map-container">
+    <div id="controls"></div>
+    <div id="map"></div>
+</div>
+<a id="map-link" href="/map">
+    <p class="text-black-50 mb-0">
+        Click here to enlarge map
+    </p>
+</a>
+<h2 class="text-black-50 mb-0">Wine by Variety</h2>
+<div class="container-fluid bar-container">
+    <div id="bar-chart"></div>
+</div>
+<h2 class="text-black-50 mb-0">Price Vs Rating</h2>
+<div class="row justify-content-center no-gutters mb-5 mb-lg-5 scatter-container">
+    <div class="col-10">
+        <h5>Select Price Range</h5>
+        <!-- Should be able to select an option from the dropdown menu and the visuals change -->
+        <select id="selDataset" onchange="optionChanged(this)">
+            <option value="0,100000">
+                All The Wine
+            </option>
+            <option value="0,10">
+                $0-$10
+            </option>
+            <option value="11,20">
+                $11-$20
+            </option>
+            <option value="21,50">
+                $21-$50
+            </option>
+            <option value="51,100">
+                $51-$100
+            </option>
+            <option value="101,200">
+                $101-$200
+            </option>
+            <option value="201,500">
+                $201-$500
+            </option>
+            <option value="501, 100000">
+                > $501
+            </option>
+        </select>
+        <div id="scatter"></div>
+    </div>
+</div>
 
-    <!-- VARIABLES -->
-    <script type="text/javascript">
-        var data = {{ states | tojson }};
-        var data10 = {{ top10 | tojson }};
-        var table10 = {{ table10 | tojson }};
+<!-- VARIABLES -->
+<script type="text/javascript">
+    var data = {{ states | tojson }};
+    var data10 = {{ top10 | tojson }};
+    var table10 = {{ table10 | tojson }};
+</script>
+
+<!-- D3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+<!-- MomentJS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin="">
     </script>
 
-    <!-- D3 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+<!-- Plotly Javascript -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    <!-- MomentJS -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+<!-- Icons -->
+<script src="static/js/leaflet-dvf.markers.js"></script>
 
-    <!-- Leaflet JavaScript -->
-    <script
-        src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-        crossorigin=""
-    >
-    </script>
+<!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
-    <!-- Plotly Javascript -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- API Key -->
+<script type="text/javascript" src="static/js/apiKey.js"></script>
 
-    <!-- Icons -->
-    <script src="static/js/leaflet-dvf.markers.js"></script>
-
-    <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-
-    <!-- API Key -->
-    <script type="text/javascript" src="static/js/apiKey.js"></script>
-
-    <!-- Javascript files must go in the static/js folder -->
-    <script type="text/javascript" src="static/js/map.js"></script>
-    <script type="text/javascript" src="static/js/scatterPlot.js"></script>
-    <script type="text/javascript" src="static/js/barGraph.js"></script>
+<!-- Javascript files must go in the static/js folder -->
+<script type="text/javascript" src="static/js/map.js"></script>
+<script type="text/javascript" src="static/js/scatterPlot.js"></script>
+<script type="text/javascript" src="static/js/barGraph.js"></script>
 {% endblock %}

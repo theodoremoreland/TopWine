@@ -23,10 +23,9 @@ h3 {
 .map-container {
   width: var(--v-width);
   height: 575px;
-  margin-bottom: 65px;
 }
 
-.map-container p {
+#map-link p {
   text-align: center;
   font-size: 2rem;
   color: rgb(65, 65, 247);
