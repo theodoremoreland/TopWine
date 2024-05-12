@@ -23,6 +23,26 @@ h3 {
 .map-container {
   width: var(--v-width);
   height: 575px;
+  padding: 0 25px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .map-container {
+    padding: initial;
+  }
+}
+
+#map-link {
+  display: block;
+  max-width: 75%;
+  width: clamp(180px, 75%, 500px);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #map-link {
+    width: auto;
+  }
 }
 
 #map-link p {
