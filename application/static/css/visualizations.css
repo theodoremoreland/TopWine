@@ -20,6 +20,17 @@ h3 {
   margin: 35px 0px 5px 0px;
 }
 
+#wbv-title,
+#pvr-title {
+  margin-top: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  #wbv-title,
+  #pvr-title {
+    margin-top: 35px;
+  }
+}
 .map-container {
   width: var(--v-width);
   height: 575px;
