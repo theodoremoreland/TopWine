@@ -164,30 +164,30 @@ Visit: http://localhost:5000 to use the application.
 
 ## Mobile
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/12.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/12.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/13.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/13.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/14.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/14.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/15.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/15.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/16.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/16.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/17.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/17.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/18.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/18.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/19.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/19.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/20.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/20.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/21.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/21.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/22.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/22.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/23.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/23.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/24.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/24.png" width="250">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/25.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/25.png" width="250">
