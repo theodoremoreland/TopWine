@@ -138,29 +138,29 @@ Visit: http://localhost:5000 to use the application.
 
 ## Desktop
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/1.png" width="800">
+<img src="presentation/thumbnail.png" width="700">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/2.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/2.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/3.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/3.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/4.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/4.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/5.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/5.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/6.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/6.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/7.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/7.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/8.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/8.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/9.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/9.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/10.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/10.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/11.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/11.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/26.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/top-wine/26.png" width="650">
 
 ## Mobile
 
