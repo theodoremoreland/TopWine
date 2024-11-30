@@ -116,7 +116,7 @@ python application.py
 
 ## Run on Docker
 
-Firstly, confirm that Docker is installed and running. Next confirm that no other application is using port `5000` as port `5000` is needed for the Flask server. If you need to run Flask on an alternative port, you can modify the last line in the `application/application.py` file.
+Firstly, confirm that Docker is installed and running. Next confirm that no other application is using port `5000` as port `5000` is needed for the Flask server. If you need to run Flask on an alternative port, you can modify the last line in the `application/application.py` file and the ports in the `docker/docker-compose.yml` file.
 
 **It is assumed the user is at the root of this project and is using a UNIX style command line environment when referencing the CLI commands below.**
 
