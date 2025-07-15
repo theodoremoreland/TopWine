@@ -16,6 +16,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Create apiKey.js
+        run: |
+          echo "const apiKey = '${{ secrets.API_KEY }}';" > application/static/js/apiKey.js
+
       - name: Build Docker image
         run: docker build -t top-wine:latest .
 

@@ -4,6 +4,8 @@ Visualizations and analysis of wine quality based on reviews from the country's 
 
 <img src="presentation/thumbnail.png" width="700">
 
+[View the application](https://top-wine-container-service.tw35szt7qqpz2.us-east-2.cs.amazonlightsail.com/)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -50,11 +52,11 @@ Our goal for this project is to create a set of visualizations to show how wine 
   - Scatter plot showing the relationship between number of vineyards and avg wine price per state.
   - Combined bar chart showing average bottle price for each wine variety and average rating per variety.
 
-For our new JavaScript library, we will be using a leaflet plugin called "Leaflet Data Visualization Framework" to create bar chart markers for average price and average rating per state. Here is the GitHub link for this plugin: https://github.com/humangeo/leaflet-dvf.
+For our new JavaScript library, we will be using a leaflet plugin called "Leaflet Data Visualization Framework" to create bar chart markers for average price and average rating per state. Here is the GitHub link for this plugin: <https://github.com/humangeo/leaflet-dvf>.
 
 ### Dataset
 
-Link to Dataset: https://www.kaggle.com/zynicide/wine-reviews/version/4?
+Link to Dataset: <https://www.kaggle.com/zynicide/wine-reviews/version/4>?
 
 ## Technologies used
 
@@ -71,7 +73,7 @@ Python version `3.8` (`3.8.10` specifically) was tested and works for the curren
 
 Whether you are running the app directly on a Windows OS or indirectly via Docker, there are a few things you need to do in order to setup the application:
 
-- Create your own Open Street Map account and API key @ https://www.openstreetmap.org/user/new
+- Create your own Open Street Map account and API key @ <https://www.openstreetmap.org/user/new>
 - Create a file named `apiKey.js` and place it in the `application/static/js` folder.
 - Copy the contents of `apiKey.example.js` into the `apiKey.js` file you just created wherein the value of `const API_KEY` is your Open Street Map api key.
 
