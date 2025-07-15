@@ -1,0 +1,11 @@
+{
+  "containerName": "top-wine",
+  "containerPort": 5000,
+  "healthCheck": {
+    "path": "/",
+    "intervalSeconds": 5,
+    "timeoutSeconds": 2,
+    "healthyThreshold": 2,
+    "unhealthyThreshold": 2
+  }
+}

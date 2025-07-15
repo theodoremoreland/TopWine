@@ -1,0 +1,8 @@
+{
+  "top-wine": {
+    "image": ":top-wine-container-service.top-wine.latest",
+    "ports": {
+      "5000": "HTTP"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  top-wine-container-service:
+    container_name: top-wine
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000

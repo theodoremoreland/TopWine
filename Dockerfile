@@ -5,4 +5,4 @@ WORKDIR /application
 COPY application/ ./
 RUN pip install -r requirements.txt
 
-CMD [ "python", "application.py" ]
+CMD ["gunicorn", "--chdir", "/application", "application:application", "--bind", "0.0.0.0:5000"]
