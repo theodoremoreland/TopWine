@@ -8,6 +8,12 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - "README.md"
+      - "presentation/**"
+      - ".vscode/**"
+      - "docker-compose.yml"
+      - ".gitignore"
 
 jobs:
   deploy:
