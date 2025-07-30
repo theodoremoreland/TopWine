@@ -2,9 +2,9 @@
 
 Visualizations and analysis of wine quality based on reviews from the country's top 10 wine critics. This was a group project at _Washington University's Data Analytics Boot Camp (2019)_.
 
-<img src="presentation/thumbnail.png" width="700">
+<img src="presentation/thumbnail.webp" width="700">
 
-[View the application](https://top-wine-container-service.tw35szt7qqpz2.us-east-2.cs.amazonlightsail.com/)
+[View the application](https://top-wine.theodoremoreland.dev/)
 
 ## Table of contents
 
