@@ -2,6 +2,16 @@
 
 Visualizations and analysis of wine quality based on reviews from the country's top 10 wine critics. This was a group project at _Washington University's Data Analytics Boot Camp (2019)_.
 
+## Redesign notes
+
+The big thing is that all the content (with the exception of the full screen map and credits) should be on the home page.
+
+- Horizontal row of wine bottles (one brand for each variety in dataset)
+- Cards in a "fanned" (for lacked of a better word) stack with images of wineries
+- Animation of a bottle of wine wherein the wine fills up the glass to represent the average wine rating (a note can be present detailing the average price as well)
+- The map is on a rounded card
+- Each section alternates background color
+
 <img src="presentation/thumbnail.webp" width="700">
 
 [View the application](https://top-wine.theodoremoreland.dev/)
