@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="description" content="Visualizations and analysis of wine quality based on reviews from the country's top 10 wine critics. ">
+        <meta name="author" content="Top Wine Team - Project Group 2">
 
         <!-- <a target="_blank" href="https://icons8.com/icon/UKe62kB0eYkQ/wine">Wine</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> -->
         <link rel="icon" type="image/png" href="../static/img/favicon.png">
@@ -24,6 +24,33 @@
 
         <!-- Custom styles for this template -->
         <link href="static/css/grayscale.css" rel="stylesheet">
+
+        <!-- VARIABLES -->
+        <script id="app-data" type="application/json">
+            {
+                "states": {{ states | tojson }},
+                "data10": {{ top10 | tojson }},
+                "table10": {{ table10 | tojson }}
+            }
+        </script>
+        <script type="text/javascript">
+            var appData = JSON.parse(document.getElementById('app-data').textContent);
+            var data = appData.states;
+            var data10 = appData.data10;
+            var table10 = appData.table10;
+        </script>
+
+        <!-- D3 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+        <!-- MomentJS -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+        <!-- Plotly Javascript -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+        <!-- polyfill.io is library for using newer JavaScript features in older browsers (such as Object.assign) -->
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     </head>
 
     <body id="page-top">
@@ -89,7 +116,7 @@
                     </div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <a href="/visualizations">
+                            <a href="">
                                 <h4>
                                     Visualizations
                                 </h4>
@@ -117,15 +144,15 @@
                                     <br>
                                     <p class="mb-0 text-white-50">
                                         * Across wine varieties, average prices and ratings do not vary significantly.
-                                        If you have a favorite wine variety, you don’t need to worry about missing out
-                                        on value since there aren’t major differences across the most popular wine
+                                        If you have a favorite wine variety, you don't need to worry about missing out
+                                        on value since there aren't major differences across the most popular wine
                                         types.
                                     </p>
                                     <br>
                                     <p class="mb-0 text-white-50">
-                                        * In general, there isn’t a strong correlation between wine prices and ratings.
-                                        Even in different price brackets, a wine’s price isn’t related to its rating in
-                                        a meaningful way. Therefore, we are happy to report that you don’t need to spend
+                                        * In general, there isn't a strong correlation between wine prices and ratings.
+                                        Even in different price brackets, a wine's price isn't related to its rating in
+                                        a meaningful way. Therefore, we are happy to report that you don't need to spend
                                         a fortune to enjoy nice wine!
                                     </p>
                                     <hr class="d-none d-lg-block mb-0 ml-0">

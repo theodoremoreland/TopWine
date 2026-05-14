@@ -1,0 +1,37 @@
+<h2 id="pvr-title" class="text-black-50 mb-0">Price Vs Rating</h2>
+<div class="row justify-content-center no-gutters mb-5 mb-lg-5 scatter-container">
+    <div class="col-10">
+        <h5>Select Price Range</h5>
+        <!-- Should be able to select an option from the dropdown menu and the visuals change -->
+        <select id="selDataset" onchange="optionChanged(this)">
+            <option value="0,100000">
+                All The Wine
+            </option>
+            <option value="0,10">
+                $0-$10
+            </option>
+            <option value="11,20">
+                $11-$20
+            </option>
+            <option value="21,50">
+                $21-$50
+            </option>
+            <option value="51,100">
+                $51-$100
+            </option>
+            <option value="101,200">
+                $101-$200
+            </option>
+            <option value="201,500">
+                $201-$500
+            </option>
+            <option value="501, 100000">
+                > $501
+            </option>
+        </select>
+        <div id="scatter"></div>
+    </div>
+</div>
+
+<!-- Javascript files must go in the static/js folder -->
+<script type="text/javascript" src="static/js/scatterPlot.js"></script>
