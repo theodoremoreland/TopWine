@@ -12,6 +12,7 @@ The big thing is that all the content (with the exception of the full screen map
 - The map is on a rounded card
 - Each section alternates background color
 - https://www.behance.net/gallery/247651255/-HORMN-BRAND-IDENTITY-FOR-HEALTHCARE-PLATFORM?tracking_source=search_projects|modern+website+design&l=1
+- https://www.behance.net/gallery/247907919/Homevo-Modern-Ecommerce-Furniture-Website-UIUX-Design?tracking_source=search_projects|modern+website+design&l=9
 
 <img src="presentation/thumbnail.webp" width="700">
 
