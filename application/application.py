@@ -154,12 +154,5 @@ def map():
         return render_template("error.html")
 
 
-@application.route("/credits")
-def credits():
-    logger.info("Rendering credits.html...")
-
-    return render_template("credits.html")
-
-
 if __name__ == "__main__":
     application.run(host="0.0.0.0", port=5000)
