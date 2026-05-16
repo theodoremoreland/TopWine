@@ -11,7 +11,7 @@ The big thing is that all the content (with the exception of the full screen map
 - Animation of a bottle of wine wherein the wine fills up the glass to represent the average wine rating (a note can be present detailing the average price as well)
 - The map is on a rounded card
 - Each section alternates background color
-- - https://www.behance.net/gallery/247651255/-HORMN-BRAND-IDENTITY-FOR-HEALTHCARE-PLATFORM?tracking_source=search_projects|modern+website+design&l=1
+- https://www.behance.net/gallery/247651255/-HORMN-BRAND-IDENTITY-FOR-HEALTHCARE-PLATFORM?tracking_source=search_projects|modern+website+design&l=1
 
 <img src="presentation/thumbnail.webp" width="700">
 
