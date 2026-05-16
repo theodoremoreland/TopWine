@@ -1,3 +1,9 @@
 {
-  "cSpell.words": ["automap", "Plotly", "SQLALCHEMY", "topwine"]
+  "cSpell.words": [
+    "automap",
+    "Plotly",
+    "SQLALCHEMY",
+    "topwine"
+  ],
+  "workbench.browser.openLocalhostLinks": false
 }

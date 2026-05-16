@@ -59,17 +59,10 @@ def setup():
 
 @application.route("/")
 def index():
-    logger.info("Rendering index.html...")
-
-    return render_template("index.html")
-
-
-@application.route("/visualizations")
-def stats():
     global results_from_states_query, results_from_reviews_query
     extracted_reviews_list = []
 
-    logger.info("Rendering visualizations.html...")
+    logger.info("Rendering index.html...")
 
     try:
         for row in results_from_reviews_query:
@@ -122,7 +115,7 @@ def stats():
         }
 
         return render_template(
-            "visualizations.html",
+            "index.html",
             states=extracted_states_dict,
             top10=extracted_reviews_list,
             table10=extracted_reviews_dict,

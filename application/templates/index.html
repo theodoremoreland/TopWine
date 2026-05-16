@@ -25,32 +25,27 @@
         <!-- Custom styles for this template -->
         <link href="static/css/grayscale.css" rel="stylesheet">
 
-        <!-- VARIABLES -->
-        <script id="app-data" type="application/json">
-            {
-                "states": {{ states | tojson }},
-                "data10": {{ top10 | tojson }},
-                "table10": {{ table10 | tojson }}
-            }
-        </script>
-        <script type="text/javascript">
-            var appData = JSON.parse(document.getElementById('app-data').textContent);
-            var data = appData.states;
-            var data10 = appData.data10;
-            var table10 = appData.table10;
-        </script>
+        <!-- Bootstrap core JavaScript -->
+        <script defer src="static/vendor/jquery/jquery.min.js"></script>
+        <script defer src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script defer src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script defer src="static/js/grayscale.min.js"></script>
 
         <!-- D3 -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
 
         <!-- MomentJS -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
 
         <!-- Plotly Javascript -->
-        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script defer src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
         <!-- polyfill.io is library for using newer JavaScript features in older browsers (such as Object.assign) -->
-        <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+        <script defer src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     </head>
 
     <body id="page-top">
@@ -58,7 +53,7 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                    Home
+                    Top Wine
                 </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                     data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -103,6 +98,11 @@
         </header>
         <!-- Projects Section -->
         <section id="projects" class="projects-section bg-light">
+            <div class="container">
+                <p>
+                    Our goal for this project is to create a set of visualizations to show how wine varieties, pricing, and ratings vary by location in the United States. We also want to show how ratings and price differ between wine varieties. The data set we are using comes from a web scraping project that sourced data points on individual wines from WineEnthusiast back in 2017. The data points collected include country of origin, description, points (rating), region, price, variety, etc.
+                </p>
+            </div>
             <div class="container">
                 <!-- Featured Route Row -->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
@@ -195,15 +195,20 @@
             </a>
         </footer>
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="static/vendor/jquery/jquery.min.js"></script>
-        <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-        <!-- Custom scripts for this template -->
-        <script src="static/js/grayscale.min.js"></script>
+                <!-- VARIABLES -->
+        <script id="app-data" type="application/json">
+            {
+                "states": {{ states | tojson }},
+                "data10": {{ top10 | tojson }},
+                "table10": {{ table10 | tojson }}
+            }
+        </script>
+        <script type="text/javascript">
+            var appData = JSON.parse(document.getElementById('app-data').textContent);
+            var data = appData.states;
+            var data10 = appData.data10;
+            var table10 = appData.table10;
+        </script>
     </body>
 
 </html>
