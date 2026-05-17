@@ -68,11 +68,13 @@
         </header>
         <!-- Projects Section -->
         <section id="projects" class="projects-section bg-light">
-            <div class="container">
-                <p>
-                    Our goal for this project was to create a set of visualizations to show how wine varieties, pricing, and ratings vary by location in the United States. We also show how ratings and price differ between wine varieties. The data set we are using comes from a web scraping project that sourced data points on individual wines from WineEnthusiast back in 2017. The data points collected include country of origin, description, points (rating), region, price, variety, etc.
-                </p>
-            </div>
+            {% include 'components/intro.html' %}
+            {% include 'components/sourced_from.html' %}
+            {% include 'components/map_card.html' %}
+            {% include 'components/varieties.html' %}
+            {% include 'components/wine_by_variety_chart.html' %}
+            {% include 'components/wine_bottle_fill.html' %}
+            {% include 'components/price_vs_rating_plot.html' %}
             <div class="container">
                 <!-- Featured Route Row -->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
