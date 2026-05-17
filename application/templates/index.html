@@ -50,22 +50,8 @@
         {% include 'components/navbar.html' %}
 
         <!-- Header -->
-        <header class="masthead">
-            <div class="container d-flex h-100 align-items-center">
-                <div class="mx-auto text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">
-                        Top Wine
-                    </h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">
-                        Visualizations and analysis of wine quality based on reviews from the country's top 10 wine
-                        critics.
-                    </h2>
-                    <a href="#visualizations" class="btn btn-primary js-scroll-trigger">
-                        Continue
-                    </a>
-                </div>
-            </div>
-        </header>
+        {% include 'components/hero.html' %}
+
         <!-- Projects Section -->
         <section id="projects" class="projects-section bg-light">
             {% include 'components/intro.html' %}
@@ -75,70 +61,13 @@
             {% include 'components/wine_by_variety_chart.html' %}
             {% include 'components/wine_bottle_fill.html' %}
             {% include 'components/price_vs_rating_plot.html' %}
-            <div class="container">
-                <!-- Featured Route Row -->
-                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div id="visualizations-image-container" class="col-xl-8 col-lg-7">
-                        <a title="Click here to view visualizations" id="visualizations-link" href="/visualizations">
-                            Click here to view visualizations
-                        </a>
-                        <img id="visualizations" class="img-fluid"
-                            src="{{ url_for('static', filename='img/full-screen-map.png') }}" alt="wine bottle image">
-                        </img>
-                    </div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <a href="">
-                                <h4>
-                                    Visualizations
-                                </h4>
-                            </a>
-                            <p class="text-black-50 mb-0">Click to view a map, bar graph, and scatter plot visualizing
-                                wine ratings.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Route Two Row -->
-                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                    <div class="col-lg-6">
-                        <img class="img-fluid" src="{{ url_for('static', filename='img/tall1.jpg') }}" alt="">
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left" id="conclusions">
-                                    <h4 class="text-white">Conclusions</h4>
-                                    <p class="mb-0 text-white-50">
-                                        * There are three states which clearly produce higher-value wines: Iowa, Ohio,
-                                        and Connecticut. The rating-to-price ratio in these states is significantly
-                                        higher than states like California, which are well-known for their wines.
-                                    </p>
-                                    <br>
-                                    <p class="mb-0 text-white-50">
-                                        * Across wine varieties, average prices and ratings do not vary significantly.
-                                        If you have a favorite wine variety, you don't need to worry about missing out
-                                        on value since there aren't major differences across the most popular wine
-                                        types.
-                                    </p>
-                                    <br>
-                                    <p class="mb-0 text-white-50">
-                                        * In general, there isn't a strong correlation between wine prices and ratings.
-                                        Even in different price brackets, a wine's price isn't related to its rating in
-                                        a meaningful way. Therefore, we are happy to report that you don't need to spend
-                                        a fortune to enjoy nice wine!
-                                    </p>
-                                    <hr class="d-none d-lg-block mb-0 ml-0">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% include 'components/conclusions.html' %}
         </section>
 
+        <!-- Footer -->
         {% include 'components/footer.html' %}
 
-                <!-- VARIABLES -->
+        <!-- VARIABLES -->
         <script id="app-data" type="application/json">
             {
                 "states": {{ states | tojson }},
